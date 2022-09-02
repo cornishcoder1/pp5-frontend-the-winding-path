@@ -53,8 +53,14 @@ Implement manual testing and document the procedures and results.
 
 ***
 
+# Project Setup
+
+1. 
+
+***
+
 # Deployment
-Initial and final if appropriate
+Final deployment
 
 ***
 
@@ -63,3 +69,5 @@ Initial and final if appropriate
 ***
 
 # Credits
+
+- Charlie_Alumni, Bim_Alumni and Lauren_Nicole for helping me install ESLint correctly. 
