@@ -1,0 +1,3 @@
+- Jest Testing 
+- Manual Testing
+- ESLint Testing
