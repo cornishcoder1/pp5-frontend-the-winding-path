@@ -1,4 +1,0 @@
-- Unit testing (Jest)
-- Validation testing (TEST ALL LANGUAGES, USE DEPLOYED LINKS!)
-- User Story testing
-- Responsive testing
