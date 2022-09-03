@@ -1,0 +1,37 @@
+.App {
+    font-family: "Zilla Slab", sans-serif;
+    background-color: #D9F4C7;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+  } 
+  
+  a {
+    font-size: larger;
+    font-weight:normal;
+    transition: color ease-in-out 0.3s;
+  }
+  
+  /* a:hover {
+    text-decoration: none;
+  } */
+  
+  a:hover i {
+    color: #5EA13C;
+    transition: color ease-in-out 0.3s;
+  }
+  
+  i {
+    color: rgb(155, 153, 153);
+    font-size: 1.6rem;
+    padding: 7px;
+    vertical-align: middle;
+  }
+  
+  i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: #5EA13C;
+  }
