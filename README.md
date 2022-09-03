@@ -79,6 +79,8 @@ Implement manual testing and document the procedures and results.
 
 12. Click 'Open App' button to view newly deployed app. 
 
+13. To install Bootstrap, run terminal command **npm install react-bootstrap@1.6.3 bootstrap@4.6.0**
+
 ***
 
 # Deployment
@@ -90,6 +92,15 @@ Final deployment
 
 ***
 
+# Media
+
+- Trail icon by <a href="https://www.flaticon.com/free-icon/path_2296506?term=trail&page=1&position=8&page=1&position=8&related_id=2296506&origin=tag" title="Smashicons">Smashicons</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+
+***
+
 # Credits
 
 - Charlie_Alumni, Bim_Alumni and Lauren_Nicole for helping me install ESLint correctly. 
+
+
+
