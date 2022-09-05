@@ -9,10 +9,10 @@
 }
 
 .Content {
-  background-color: #ffffff;
+  background-color: #F8FFF8;
   padding: 10px;
   border-radius: 2px;
-  border: 1px solid #dadadf;
+  box-shadow: 0px 2px 5px #dadadf;
 }
 
 .FillerImage {
@@ -40,8 +40,8 @@
   
   a {
     font-size: larger;
-    color: rgb(101, 101, 101);;
-    font-weight:normal;
+    color: rgb(101, 101, 101);
+    font-weight: normal;
     text-decoration: none;
     padding: 7px;
     /* transition: color ease-in-out 0.3s; */
