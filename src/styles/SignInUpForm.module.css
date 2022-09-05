@@ -2,15 +2,6 @@
     height: calc(100vh - 81px);
     padding-top: 100px;
   }
-  .Input {
-    background: #ffffff;
-    border: 1px solid #f0f1f9;
-    box-sizing: border-box;
-    border-radius: 2px;
-    color: #7177a1;
-    text-align: center;
-    padding: 10px;
-  }
   
   .Header {
     font-style: normal;
@@ -29,8 +20,19 @@
     display: block;
     margin: auto;
   }
+
+  .LinkSignin {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+
+  .LinkSignin:hover{
+    color:#2F4858
+  } 
   
-  .Link span {
+  .LinkSignin span {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: bold;
