@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavDropdown, Container, Nav, } from 'react-bootstrap';
+import { Navbar, Container, Nav, } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -40,12 +40,8 @@ const NavBar = () => {
     </NavLink>
   )
 
-  const loggedInIcons = <>
-    <span className={styles.NavLink} activeClassName={styles.Active}><NavDropdown title="Add post" id="basic-nav-dropdown">
-      <NavDropdown.Item>{currentUser && addWalk}</NavDropdown.Item>
-      <NavDropdown.Item>{currentUser && addGalleryPost}</NavDropdown.Item>
-    </NavDropdown></span>
 
+  const loggedInIcons = <>
     <NavLink
     className={styles.NavLink}
     activeClassName={styles.Active}
@@ -75,7 +71,6 @@ const NavBar = () => {
 
     <NavLink
     className={styles.NavLink}
-    activeClassName={styles.Active}
     to="/"
     onClick={handleSignOut}
     >
@@ -92,6 +87,7 @@ const NavBar = () => {
       </NavLink>
 
   </>
+
   const loggedOutIcons = (
   <>
     <NavLink
@@ -125,9 +121,12 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left"> 
+          
             <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
               <i className="fa-solid fa-house-chimney"></i>Home     
-            </NavLink>            
+            </NavLink>     
+            {currentUser && addWalk}
+            {currentUser && addGalleryPost}       
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
