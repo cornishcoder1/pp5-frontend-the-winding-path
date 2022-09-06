@@ -3,11 +3,91 @@ import { Navbar, Container, Nav, } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from '../contexts/CurrentUserContext';
+import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
+import Avatar from './Avatar';
+import axios from 'axios';
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
-  const loggedInIcons = <>{currentUser?.username}</>
+  const setCurrentUser = useSetCurrentUser();
+
+  const handleSignOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const addWalk = (
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/walk-posts/create"
+    >
+      <i className="fa-solid fa-person-circle-plus"></i>Add walk
+    </NavLink>
+  )
+
+  const addGalleryPost = (
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/gallery-posts/create"
+    >
+      <i className="fa-regular fa-square-plus"></i>Add gallery post
+    </NavLink>
+  )
+  
+
+  const loggedInIcons = <>
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/gallery-posts"
+
+    >
+      <i className="fa-solid fa-paintbrush"></i>Gallery
+    </NavLink>
+
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/following"
+
+    >
+      <i className="fa-solid fa-users"></i>Following
+    </NavLink>
+
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/saved-walks"
+
+    >
+      <i className="fa-solid fa-bookmark"></i>Saved Walks
+    </NavLink>
+
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/"
+    onClick={handleSignOut}
+    >
+      <i className="fa-solid fa-sign-out-alt"></i>Log out
+    </NavLink>
+
+    <NavLink
+        className={styles.NavLink}
+        to={`/profiles/${currentUser?.profile_id}`}
+      >
+        <Avatar src={currentUser?.profile_image} alt="profile"
+                height={40} />
+        {currentUser?.username}
+      </NavLink>
+
+  </>
   const loggedOutIcons = (
   <>
     <NavLink
@@ -40,10 +120,12 @@ const NavBar = () => {
         </Nav>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto text-left">
+          <Nav className="ml-auto text-left"> 
             <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
               <i className="fa-solid fa-house-chimney"></i>Home     
             </NavLink>
+            {currentUser && addWalk}
+            {currentUser && addGalleryPost}
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
