@@ -4,13 +4,16 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CurrentUserProvider } from './contexts/CurrentUserContext';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
 	<Router>
-		<App />  
+		<CurrentUserProvider>
+			<App />  
+		</CurrentUserProvider>
 	</Router>,
 );
 
