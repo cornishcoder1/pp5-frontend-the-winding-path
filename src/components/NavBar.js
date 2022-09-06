@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav, } from 'react-bootstrap';
+import { Navbar, NavDropdown, Container, Nav, } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -39,9 +39,13 @@ const NavBar = () => {
       <i className="fa-regular fa-square-plus"></i>Add gallery post
     </NavLink>
   )
-  
 
   const loggedInIcons = <>
+    <span className={styles.NavLink} activeClassName={styles.Active}><NavDropdown title="Add post" id="basic-nav-dropdown">
+      <NavDropdown.Item>{currentUser && addWalk}</NavDropdown.Item>
+      <NavDropdown.Item>{currentUser && addGalleryPost}</NavDropdown.Item>
+    </NavDropdown></span>
+
     <NavLink
     className={styles.NavLink}
     activeClassName={styles.Active}
@@ -123,9 +127,7 @@ const NavBar = () => {
           <Nav className="ml-auto text-left"> 
             <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
               <i className="fa-solid fa-house-chimney"></i>Home     
-            </NavLink>
-            {currentUser && addWalk}
-            {currentUser && addGalleryPost}
+            </NavLink>            
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>

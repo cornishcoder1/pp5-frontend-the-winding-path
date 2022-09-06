@@ -11,3 +11,12 @@
 .Active i {
     color: #5EA13C;
 }
+
+.NavDropdown {   
+    color: rgb(101, 101, 101);
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 5px;
+}
+
+
