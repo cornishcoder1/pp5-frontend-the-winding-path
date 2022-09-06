@@ -30,7 +30,8 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/walk-posts/create"
     >
-      <i className="fa-solid fa-person-circle-plus"></i>Add walk
+      <i className="fa-solid fa-person-circle-plus"></i>
+      {/* Add walk */}
     </NavLink>
   )
 
@@ -40,7 +41,8 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/gallery-posts/create"
     >
-      <i className="fa-regular fa-square-plus"></i>Add gallery post
+      <i className="fa-regular fa-square-plus"></i>
+      {/* Add gallery post */}
     </NavLink>
   )
 
@@ -52,7 +54,8 @@ const NavBar = () => {
     to="/gallery-posts"
 
     >
-      <i className="fa-solid fa-paintbrush"></i>Gallery
+      <i className="fa-solid fa-paintbrush"></i>
+      Gallery
     </NavLink>
 
     <NavLink
@@ -61,7 +64,8 @@ const NavBar = () => {
     to="/following"
 
     >
-      <i className="fa-solid fa-users"></i>Following
+      <i className="fa-solid fa-users"></i>
+      Following
     </NavLink>
 
     <NavLink
@@ -70,7 +74,8 @@ const NavBar = () => {
     to="/saved-walks"
 
     >
-      <i className="fa-solid fa-bookmark"></i>Saved Walks
+      <i className="fa-solid fa-bookmark"></i>
+      Saved Walks
     </NavLink>
 
     <NavLink
@@ -78,7 +83,8 @@ const NavBar = () => {
     to="/"
     onClick={handleSignOut}
     >
-      <i className="fa-solid fa-sign-out-alt"></i>Log out
+      <i className="fa-solid fa-sign-out-alt"></i>
+      Log out
     </NavLink>
 
     <NavLink
@@ -112,7 +118,7 @@ const NavBar = () => {
   );
 
   return ( 
-    <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
+    <Navbar expanded={expanded} className={styles.NavBar} expand="lg" fixed="top">
       <Container>
         
         <Nav className="text-right">
@@ -128,12 +134,14 @@ const NavBar = () => {
         aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left"> 
-          
-            <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
-              <i className="fa-solid fa-house-chimney"></i>Home     
-            </NavLink>     
             {currentUser && addWalk}
-            {currentUser && addGalleryPost}       
+            {currentUser && addGalleryPost}
+            <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
+             
+              <i className="fa-solid fa-house-chimney"></i>
+              Home     
+            </NavLink>     
+                  
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
