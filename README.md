@@ -96,6 +96,8 @@ Final deployment
 
 - Trail icon by <a href="https://www.flaticon.com/free-icon/path_2296506?term=trail&page=1&position=8&page=1&position=8&related_id=2296506&origin=tag" title="Smashicons">Smashicons</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
+- Gallery image upload icon by <a href="https://www.flaticon.com/free-icon/path_2296506?term=trail&page=1&position=8&page=1&position=8&related_id=2296506&origin=tag" title="Good Ware">Good Ware</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+
 ***
 
 # Credits
