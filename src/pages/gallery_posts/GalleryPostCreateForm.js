@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert"
 
 import Upload from "../../assets/upload.png";
 
@@ -13,6 +14,8 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+import { axiosReq } from "../../api/axiosDefaults";
 
 function GalleryPostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -20,10 +23,13 @@ function GalleryPostCreateForm() {
   const [galleryPostData, setGalleryPostData] = useState({
     title: "",
     category: "",
-    description: "",
+    content: "",
     image: "",
   });
-  const { title, category, description, image } = galleryPostData;
+  const { title, category, content, image } = galleryPostData;
+
+  const imageInput = useRef(null);
+  const history = useHistory();
 
   const handleChange = (event) => {
     setGalleryPostData({
@@ -42,6 +48,26 @@ function GalleryPostCreateForm() {
     }
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("category", category);
+    formData.append("content", content);
+    formData.append("image", imageInput.current.files[0]);
+
+    try {
+      const { data } = await axiosReq.post("/gallery-posts/", formData);
+      history.push(`/gallery-posts/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
   const textFields = (
     <div className="text-center">
         <Form.Group>
@@ -53,6 +79,11 @@ function GalleryPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
+        {errors?.title?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>Category</Form.Label>
@@ -68,21 +99,31 @@ function GalleryPostCreateForm() {
                     <option value="photography">Photography</option>
                 </Form.Control>
         </Form.Group>
+        {errors?.category?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>Description</Form.Label>
                 <Form.Control
                 as="textarea"
                 rows={6}
-                name="description"
-                value={description}
+                name="content"
+                value={content}
                 onChange={handleChange}
                 />
         </Form.Group>
+        {errors?.content?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Button
             className={btnStyles.Button}
-            onClick={() => {}}
+            onClick={() => history.goBack()}
         >
             cancel
         </Button>
@@ -93,7 +134,7 @@ function GalleryPostCreateForm() {
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
@@ -131,6 +172,7 @@ function GalleryPostCreateForm() {
                 accept="image/*"
                 onChange={handleChangeImage}
                 className="d-none"
+                ref={imageInput}
               />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>

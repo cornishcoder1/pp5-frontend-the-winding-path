@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert"
 
 import Upload from "../../assets/upload.png";
 
@@ -13,6 +14,8 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { axiosReq } from "../../api/axiosDefaults";
 
 function WalkPostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -26,7 +29,7 @@ function WalkPostCreateForm() {
     difficulty: "",
     length: "",
     duration: "",
-    description: "",
+    content: "",
     image: "",
   });
   const { title,
@@ -37,8 +40,11 @@ function WalkPostCreateForm() {
     difficulty,
     length, 
     duration,
-    description,
+    content,
     image } = walkPostData;
+
+    const imageInput = useRef(null);
+    const history = useHistory();
 
   const handleChange = (event) => {
     setWalkPostData({
@@ -57,6 +63,32 @@ function WalkPostCreateForm() {
     }
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("headline", headline);
+    formData.append("environment", environment);
+    formData.append("wc", wc);
+    formData.append("dog_friendly", dog_friendly);
+    formData.append("difficulty", difficulty);
+    formData.append("length", length);
+    formData.append("duration", duration);
+    formData.append("content", content);
+    formData.append("image", imageInput.current.files[0]);
+
+    try {
+      const { data } = await axiosReq.post("/walk-posts/", formData);
+      history.push(`/walk-posts/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
+
   const textFields = (
     <div className="text-center">
         <Form.Group>
@@ -68,6 +100,11 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
+        {errors?.title?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>Headline</Form.Label>
@@ -78,6 +115,11 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
+        {errors?.headline?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>Environment</Form.Label>
@@ -99,6 +141,11 @@ function WalkPostCreateForm() {
                     <option value="other">Other</option>
                 </Form.Control>
         </Form.Group>
+        {errors?.environment?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>WC en-route?</Form.Label>
@@ -114,6 +161,11 @@ function WalkPostCreateForm() {
                     <option value="no">No</option>
                 </Form.Control>
         </Form.Group>
+        {errors?.wc?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
 
         <Form.Group>
@@ -130,6 +182,11 @@ function WalkPostCreateForm() {
                     <option value="no">No</option>
                 </Form.Control>
         </Form.Group>
+        {errors?.dog_friendly?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
 
         <Form.Group>
@@ -147,6 +204,11 @@ function WalkPostCreateForm() {
                     <option value="challenging">Challenging</option>
                 </Form.Control>
         </Form.Group>
+        {errors?.difficulty?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>Length in Miles</Form.Label>
@@ -158,6 +220,11 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
+        {errors?.length?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>Duration in Hours</Form.Label>
@@ -169,21 +236,31 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
+        {errors?.duration?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
             <Form.Label>Description</Form.Label>
                 <Form.Control
                 as="textarea"
                 rows={6}
-                name="description"
-                value={description}
+                name="content"
+                value={content}
                 onChange={handleChange}
                 />
         </Form.Group>
+        {errors?.content?.map((message, idx) => (
+          <Alert variant="danger" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Button
             className={btnStyles.Button}
-            onClick={() => {}}
+            onClick={() => history.goBack()}
         >
             cancel
         </Button>
@@ -194,7 +271,7 @@ function WalkPostCreateForm() {
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
@@ -232,6 +309,7 @@ function WalkPostCreateForm() {
                 accept="image/*"
                 onChange={handleChangeImage}
                 className="d-none"
+                ref={imageInput}
               />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
