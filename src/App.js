@@ -7,6 +7,7 @@ import "./api/axiosDefaults";
 import SignUpForm from './pages/auth/SignUpForm';
 import LogInForm from './pages/auth/LogInForm';
 import GalleryPostCreateForm from './pages/gallery_posts/GalleryPostCreateForm';
+import WalkPostCreateForm from './pages/walk_posts/WalkPostCreateForm';
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
 					<Route exact path="/signup" render={() => <SignUpForm />} />
 					<Route exact path="/gallery-posts/create"
 					render={() => <GalleryPostCreateForm />} />
+					<Route exact path="/walk-posts/create"
+					render={() => <WalkPostCreateForm />} />
 					<Route render={() => <p>Page not found!</p>} />
 				</Switch>
 			</Container>

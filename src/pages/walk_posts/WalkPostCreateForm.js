@@ -14,20 +14,35 @@ import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
 
-function GalleryPostCreateForm() {
+function WalkPostCreateForm() {
   const [errors, setErrors] = useState({});
 
-  const [galleryPostData, setGalleryPostData] = useState({
+  const [walkPostData, setWalkPostData] = useState({
     title: "",
-    category: "",
+    headline: "",
+    environment: "",
+    wc: "",
+    dog_friendly: "",
+    difficulty: "",
+    length: "",
+    duration: "",
     description: "",
     image: "",
   });
-  const { title, category, description, image } = galleryPostData;
+  const { title,
+    headline,
+    environment,
+    wc,
+    dog_friendly,
+    difficulty,
+    length, 
+    duration,
+    description,
+    image } = walkPostData;
 
   const handleChange = (event) => {
-    setGalleryPostData({
-      ...galleryPostData,
+    setWalkPostData({
+      ...walkPostData,
       [event.target.name]: event.target.value,
     });
   };
@@ -35,8 +50,8 @@ function GalleryPostCreateForm() {
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
-      setGalleryPostData({
-        ...galleryPostData,
+      setWalkPostData({
+        ...walkPostData,
         image: URL.createObjectURL(event.target.files[0]),
       });
     }
@@ -55,18 +70,104 @@ function GalleryPostCreateForm() {
         </Form.Group>
 
         <Form.Group>
-            <Form.Label>Category</Form.Label>
+            <Form.Label>Headline</Form.Label>
+            <Form.Control
+            type="text"
+            name="headline"
+            value={headline}
+            onChange={handleChange}
+            />
+        </Form.Group>
+
+        <Form.Group>
+            <Form.Label>Environment</Form.Label>
                 <Form.Control
                 as="select"
                 defaultValue="Choose..."
-                name="category"
-                value={category}
+                name="environment"
+                value={environment}
                 onChange={handleChange}
-                aria-label="category"
+                aria-label="environment"
                 >
-                    <option value="artwork">Artwork</option>
-                    <option value="photography">Photography</option>
+                    <option value="coastal">Coastal</option>
+                    <option value="countryside">Countryside</option>
+                    <option value="hill">Hill</option>
+                    <option value="moorland">Moorland</option>
+                    <option value="mountain">Mountain</option>
+                    <option value="peak">Peak</option>
+                    <option value="woodland">Woodland</option>
+                    <option value="other">Other</option>
                 </Form.Control>
+        </Form.Group>
+
+        <Form.Group>
+            <Form.Label>WC en-route?</Form.Label>
+                <Form.Control
+                as="select"
+                defaultValue="Choose..."
+                name="wc"
+                value={wc}
+                onChange={handleChange}
+                aria-label="wc"
+                >
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </Form.Control>
+        </Form.Group>
+
+
+        <Form.Group>
+            <Form.Label>Dog friendly?</Form.Label>
+                <Form.Control
+                as="select"
+                defaultValue="Choose..."
+                name="dog_friendly"
+                value={dog_friendly}
+                onChange={handleChange}
+                aria-label="dog_friendly"
+                >
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </Form.Control>
+        </Form.Group>
+
+
+        <Form.Group>
+            <Form.Label>Difficulty</Form.Label>
+                <Form.Control
+                as="select"
+                defaultValue="Choose..."
+                name="difficulty"
+                value={difficulty}
+                onChange={handleChange}
+                aria-label="difficulty"
+                >
+                    <option value="easy">Easy</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="challenging">Challenging</option>
+                </Form.Control>
+        </Form.Group>
+
+        <Form.Group>
+            <Form.Label>Length in Miles</Form.Label>
+            <Form.Control
+            type="text"
+            placeholder="e.g '2.4'"
+            name="length"
+            value={length}
+            onChange={handleChange}
+            />
+        </Form.Group>
+
+        <Form.Group>
+            <Form.Label>Duration in Hours</Form.Label>
+            <Form.Control
+            type="text"
+            placeholder="e.g '3'"
+            name="duration"
+            value={duration}
+            onChange={handleChange}
+            />
         </Form.Group>
 
         <Form.Group>
@@ -144,4 +245,4 @@ function GalleryPostCreateForm() {
   );
 }
 
-export default GalleryPostCreateForm;
+export default WalkPostCreateForm;
