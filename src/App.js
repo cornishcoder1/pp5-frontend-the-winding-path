@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import "./api/axiosDefaults";
 import SignUpForm from './pages/auth/SignUpForm';
 import LogInForm from './pages/auth/LogInForm';
+import GalleryPostCreateForm from './pages/gallery_posts/GalleryPostCreateForm';
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
 					<Route exact path="/" render={() => <h1>Home page</h1>} />
 					<Route exact path="/login" render={() => <LogInForm />} />
 					<Route exact path="/signup" render={() => <SignUpForm />} />
+					<Route exact path="/gallery-posts/create"
+					render={() => <GalleryPostCreateForm />} />
 					<Route render={() => <p>Page not found!</p>} />
 				</Switch>
 			</Container>
