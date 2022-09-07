@@ -8,6 +8,8 @@ import SignUpForm from './pages/auth/SignUpForm';
 import LogInForm from './pages/auth/LogInForm';
 import GalleryPostCreateForm from './pages/gallery_posts/GalleryPostCreateForm';
 import WalkPostCreateForm from './pages/walk_posts/WalkPostCreateForm';
+import GalleryPostPage from './pages/gallery_posts/GalleryPostPage';
+import WalkPostPage from './pages/walk_posts/WalkPostPage';
 
 function App() {
 
@@ -23,6 +25,10 @@ function App() {
 					render={() => <GalleryPostCreateForm />} />
 					<Route exact path="/walk-posts/create"
 					render={() => <WalkPostCreateForm />} />
+					<Route exact path="/gallery-posts/:id"
+					render={() => <GalleryPostPage />} />
+					<Route exact path="/walk-posts/:id"
+					render={() => <WalkPostPage />} />
 					<Route render={() => <p>Page not found!</p>} />
 				</Switch>
 			</Container>
