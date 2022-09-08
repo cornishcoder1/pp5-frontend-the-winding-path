@@ -74,6 +74,8 @@ const GalleryPost = (props) => {
                  </div>
             </Media>
         </Card.Body>
+
+        
         <Link to={`/gallery-posts/${id}`}>
             <Card.Img src={image} alt={title} />
         </Link>
