@@ -21,7 +21,7 @@ function GalleryPostPage() {
               axiosReq.get(`/gallery-posts/${id}`),
             ]);
             setGalleryPost({ results: [galleryPost] });
-            console.log(galleryPost);
+            // console.log(galleryPost);
           } catch (err) {
             console.log(err);
           }

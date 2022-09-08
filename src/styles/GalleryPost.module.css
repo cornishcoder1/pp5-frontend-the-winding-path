@@ -1,6 +1,6 @@
 .GalleryPost {
-    background-color: #ffffff;
-    border: 1px solid #dadadf;
+    background-color: #F8FFF8;
+    box-shadow: 0px 2px 5px #dadadf;
     border-radius: 2px;
     margin-bottom: 16px;
     text-align: center;
@@ -16,7 +16,7 @@
   }
   
   .Heart:hover {
-    color: #2142b2;
+    color: #2F4858;
   }
   
   .HeartOutline:hover {

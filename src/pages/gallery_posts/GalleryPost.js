@@ -5,6 +5,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { axiosRes } from '../../api/axiosDefaults';
 
 const GalleryPost = (props) => {
 
@@ -14,7 +15,7 @@ const GalleryPost = (props) => {
         profile_id,
         profile_image,
         comments_count,
-        likes_count,
+        gallery_likes_count,
         like_id,
         title,
         category,
@@ -22,10 +23,43 @@ const GalleryPost = (props) => {
         image,
         updated_on,
         galleryPostPage,
+        setGalleryPosts,
     } = props;
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+
+    const handleLike = async () => {
+        try {
+          const { data } = await axiosRes.post("/likes/", { gallery_post: id });
+          setGalleryPosts((prevGalleryPosts) => ({
+            ...prevGalleryPosts,
+            results: prevGalleryPosts.results.map((gallery_post) => {
+              return gallery_post.id === id
+                ? { ...gallery_post, gallery_likes_count: gallery_post.gallery_likes_count + 1, like_id: data.id }
+                : gallery_post;
+            }),
+          }));
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+      const handleUnlike = async () => {
+        try {
+          await axiosRes.delete(`/likes/${like_id}/`);
+          setGalleryPosts((prevGalleryPosts) => ({
+            ...prevGalleryPosts,
+            results: prevGalleryPosts.results.map((gallery_post) => {
+              return gallery_post.id === id
+                ? { ...gallery_post, gallery_likes_count: gallery_post.gallery_likes_count - 1, like_id: null }
+                : gallery_post;
+            }),
+          }));
+        } catch (err) {
+          console.log(err);
+        }
+      };
 
     return <Card className={styles.GalleryPost}>
         <Card.Body>
@@ -56,11 +90,11 @@ const GalleryPost = (props) => {
                     <i className="far fa-heart" />
                     </OverlayTrigger>
                 ) : like_id ? (
-                    <span onClick={() => {}}>
+                    <span onClick={handleUnlike}>
                     <i className={`fas fa-heart ${styles.Heart}`} />
                     </span>
                 ) : currentUser ? (
-                    <span onClick={() => {}}>
+                    <span onClick={handleLike}>
                     <i className={`far fa-heart ${styles.HeartOutline}`} />
                     </span>
                 ) : (
@@ -71,7 +105,7 @@ const GalleryPost = (props) => {
                     <i className="far fa-heart" />
                     </OverlayTrigger>
                 )}
-                {likes_count}
+                {gallery_likes_count}
                 <Link to={`/gallery-posts/${id}`}>
                     <i className="far fa-comments" />
                 </Link>
