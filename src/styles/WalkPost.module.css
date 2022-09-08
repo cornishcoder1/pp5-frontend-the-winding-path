@@ -22,3 +22,7 @@
   .BookmarkOutline:hover {
     color: #2F4858;
   }
+
+  .Headline {
+    font-style: italic;
+  }
