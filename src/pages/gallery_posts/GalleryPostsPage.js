@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
-import WalkPost from "./WalkPost";
+import GalleryPost from "./GalleryPost";
 import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
@@ -15,18 +15,18 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
 
-function WalkPostsPage({ message, filter = "" }) {
-    const[walkPosts, setWalkPosts] = useState({results: []});
+function GalleryPostsPage({ message, filter = "" }) {
+    const[galleryPosts, setGalleryPosts] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
 
     const [query, setQuery] = useState("");
 
     useEffect(() => {
-        const fetchWalkPosts = async () => {
+        const fetchGalleryPosts = async () => {
           try {
-            const { data } = await axiosReq.get(`/walk-posts/?${filter}search=${query}`);
-            setWalkPosts(data);
+            const { data } = await axiosReq.get(`/gallery-posts/?${filter}search=${query}`);
+            setGalleryPosts(data);
             setHasLoaded(true);
           } catch (err) {
             console.log(err);
@@ -35,7 +35,7 @@ function WalkPostsPage({ message, filter = "" }) {
     
         setHasLoaded(false);
         const timer = setTimeout(() => {
-          fetchWalkPosts();
+          fetchGalleryPosts();
         }, 1000);
     
         return () => {
@@ -57,16 +57,16 @@ function WalkPostsPage({ message, filter = "" }) {
                 onChange={(event) => setQuery(event.target.value)}
                 type="text"
                 className="mr-sm-2"
-                placeholder="Search walk posts"
+                placeholder="Search gallery posts"
               />
             </Form>
 
 
             {hasLoaded ? (
               <>
-                {walkPosts.results.length ? (
-                  walkPosts.results.map((walk_post) => (
-                    <WalkPost key={walk_post.id} {...walk_post} setWalkPosts={setWalkPosts} />
+                {galleryPosts.results.length ? (
+                  galleryPosts.results.map((gallery_post) => (
+                    <GalleryPost key={gallery_post.id} {...gallery_post} setGalleryPosts={setGalleryPosts} />
                   ))
                 ) : (
                   <Container className={appStyles.Content}>
@@ -87,4 +87,4 @@ function WalkPostsPage({ message, filter = "" }) {
       );
     }
 
-export default WalkPostsPage;
+export default GalleryPostsPage;

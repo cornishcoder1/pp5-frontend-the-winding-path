@@ -12,6 +12,7 @@ import GalleryPostPage from './pages/gallery_posts/GalleryPostPage';
 import WalkPostPage from './pages/walk_posts/WalkPostPage';
 import WalkPostsPage from './pages/walk_posts/WalkPostsPage';
 import { useCurrentUser } from './contexts/CurrentUserContext';
+import GalleryPostsPage from './pages/gallery_posts/GalleryPostsPage';
 
 function App() {
 	const currentUser = useCurrentUser();
@@ -27,6 +28,13 @@ function App() {
 						path="/"
 						render={() => (
 							<WalkPostsPage message="No results found. Adjust the search keyword" />
+						)}
+					/>
+					<Route 
+						exact
+						path="/gallery-posts"
+						render={() => (
+							<GalleryPostsPage message="No results found. Adjust the search keyword" />
 						)}
 					/>
 					<Route
