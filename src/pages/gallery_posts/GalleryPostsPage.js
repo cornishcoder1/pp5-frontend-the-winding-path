@@ -14,6 +14,8 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function GalleryPostsPage({ message, filter = "" }) {
     const[galleryPosts, setGalleryPosts] = useState({results: []});
@@ -65,9 +67,17 @@ function GalleryPostsPage({ message, filter = "" }) {
             {hasLoaded ? (
               <>
                 {galleryPosts.results.length ? (
-                  galleryPosts.results.map((gallery_post) => (
-                    <GalleryPost key={gallery_post.id} {...gallery_post} setGalleryPosts={setGalleryPosts} />
-                  ))
+                  <InfiniteScroll
+                    children={
+                      galleryPosts.results.map((gallery_post) => (
+                        <GalleryPost key={gallery_post.id} {...gallery_post} setGalleryPosts={setGalleryPosts} />
+                      ))
+                    }
+                    dataLength={galleryPosts.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!galleryPosts.next}
+                    next={() => fetchMoreData(galleryPosts, setGalleryPosts)}
+                  />
                 ) : (
                   <Container className={appStyles.Content}>
                     <Asset src={NoResults} message={message} />

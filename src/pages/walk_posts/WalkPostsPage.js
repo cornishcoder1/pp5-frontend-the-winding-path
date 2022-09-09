@@ -14,6 +14,8 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function WalkPostsPage({ message, filter = "" }) {
     const[walkPosts, setWalkPosts] = useState({results: []});
@@ -65,9 +67,18 @@ function WalkPostsPage({ message, filter = "" }) {
             {hasLoaded ? (
               <>
                 {walkPosts.results.length ? (
-                  walkPosts.results.map((walk_post) => (
-                    <WalkPost key={walk_post.id} {...walk_post} setWalkPosts={setWalkPosts} />
-                  ))
+                  <InfiniteScroll
+                    children={
+                      walkPosts.results.map((walk_post) => (
+                        <WalkPost key={walk_post.id} {...walk_post} setWalkPosts={setWalkPosts} />
+                      ))
+                    }
+                    dataLength={walkPosts.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!walkPosts.next}
+                    next={() => fetchMoreData(walkPosts, setWalkPosts)}
+                  />
+                 
                 ) : (
                   <Container className={appStyles.Content}>
                     <Asset src={NoResults} message={message} />
