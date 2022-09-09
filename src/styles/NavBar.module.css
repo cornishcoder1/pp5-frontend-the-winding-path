@@ -8,6 +8,10 @@
     padding: 5px;
 }
 
+span {
+    font-size: 0.9rem
+}
+
 .Active i {
     color: #5EA13C;
 }

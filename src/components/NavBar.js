@@ -55,7 +55,8 @@ const NavBar = () => {
 
     >
       <i className="fa-solid fa-paintbrush"></i>
-      Gallery
+      <span className={styles.span}>Gallery</span>
+      {/* Gallery */}
     </NavLink>
 
     <NavLink
