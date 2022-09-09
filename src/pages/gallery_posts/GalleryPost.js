@@ -6,6 +6,8 @@ import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';
+import { MoreDropdown } from '../../components/MoreDropdown';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const GalleryPost = (props) => {
 
@@ -22,12 +24,28 @@ const GalleryPost = (props) => {
         content,
         image,
         updated_on,
-        galleryPostPage,
+        GalleryPostPage,
         setGalleryPosts,
     } = props;
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+
+    const history = useHistory();
+
+    const handleEdit = () => {
+      history.push(`/gallery-posts/${id}/edit`);
+    };
+  
+    const handleDelete = async () => {
+      try {
+        await axiosRes.delete(`/gallery-posts/${id}/`);
+        history.goBack();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
 
     const handleLike = async () => {
         try {
@@ -68,10 +86,16 @@ const GalleryPost = (props) => {
                     <Avatar src={profile_image} height={55} />
                     {owner}
                 </Link>
+                
                 <div className="d-flex align-items-center">
                     <span>{updated_on}</span>
-                    {is_owner && galleryPostPage && "..."}
-                 </div>
+                    {is_owner && GalleryPostPage && (
+                      <MoreDropdown
+                        handleEdit={handleEdit}
+                        handleDelete={handleDelete}
+                      />
+                    )}
+                </div>
             </Media>
         </Card.Body>
 

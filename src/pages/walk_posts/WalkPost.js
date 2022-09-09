@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';
 import styles from "../../styles/WalkPost.module.css";
+import { MoreDropdown } from '../../components/MoreDropdown';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const WalkPost = (props) => {
     const {
@@ -27,12 +29,27 @@ const WalkPost = (props) => {
         duration,
         updated_on,
         content,
-        walkPostPage,
+        WalkPostPage,
         setWalkPosts,
     } = props;
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner
+
+    const history = useHistory();
+
+    const handleEdit = () => {
+      history.push(`/walk-posts/${id}/edit`);
+    };
+  
+    const handleDelete = async () => {
+      try {
+        await axiosRes.delete(`/walk-posts/${id}/`);
+        history.goBack();
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
     const handleSave = async () => {
         try {
@@ -100,7 +117,12 @@ const WalkPost = (props) => {
                         </OverlayTrigger>
                         )}
                     </span>
-                    {is_owner && walkPostPage && "..."}
+                    {is_owner && WalkPostPage && (
+                    <MoreDropdown
+                    handleEdit={handleEdit}
+                    handleDelete={handleDelete}
+                    />
+                  )}
                 </div>
             </Media>
         </Card.Body>
