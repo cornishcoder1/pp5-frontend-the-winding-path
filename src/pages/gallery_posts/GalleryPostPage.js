@@ -12,6 +12,7 @@ import GalleryPost from "./GalleryPost";
 
 import GalleryPostCommentCreateForm from "../comments/GalleryPostCommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import GalleryComment from "../comments/GalleryComment";
 
 function GalleryPostPage() {
 
@@ -25,10 +26,12 @@ function GalleryPostPage() {
     useEffect(() => {
         const handleMount = async () => {
           try {
-            const [{ data: galleryPost }] = await Promise.all([
+            const [{ data: galleryPost }, {data: galleryComments}] = await Promise.all([
               axiosReq.get(`/gallery-posts/${id}`),
+              axiosReq.get(`/comments-gallery/?gallery_post=${id}`)
             ]);
             setGalleryPost({ results: [galleryPost] });
+            setGalleryComments(galleryComments);
             console.log(galleryPost);
           } catch (err) {
             console.log(err);
@@ -55,6 +58,15 @@ function GalleryPostPage() {
           ) : galleryComments.results.length ? (
             "Comments"
           ) : null}
+          {galleryComments.results.length ? (
+            galleryComments.results.map((galleryComment) => (
+              <GalleryComment key={galleryComment.id} {...galleryComment} />
+            ))
+          ) : currentUser ? (
+            <span>No comments yet, be the first to comment!</span>
+          ) : (
+            <span>No comments... yet</span>
+          )}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">

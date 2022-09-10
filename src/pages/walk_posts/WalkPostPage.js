@@ -12,6 +12,7 @@ import WalkPost from "./WalkPost";
 
 import WalkPostCommentCreateForm from "../comments/WalkPostCommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import WalkComment from "../comments/WalkComment";
 
 function WalkPostPage() {
     const { id } = useParams();
@@ -24,10 +25,12 @@ function WalkPostPage() {
     useEffect(() => {
         const handleMount = async () => {
           try {
-            const [{ data: walkPost }] = await Promise.all([
+            const [{ data: walkPost }, {data: walkComments}] = await Promise.all([
               axiosReq.get(`/walk-posts/${id}`),
+              axiosReq.get(`/comments-walk/?walk_post=${id}`)
             ]);
             setWalkPost({ results: [walkPost] });
+            setWalkComments(walkComments);
             console.log(walkPost);
           } catch (err) {
             console.log(err);
@@ -55,6 +58,15 @@ function WalkPostPage() {
           ) : walkComments.results.length ? (
             "Comments"
           ) : null}
+          {walkComments.results.length ? (
+            walkComments.results.map((walkComment) => (
+              <WalkComment key={walkComment.id} {...walkComment} />
+            ))
+          ) : currentUser ? (
+            <span>No comments yet, be the first to comment!</span>
+          ) : (
+            <span>No comments... yet</span>
+          )}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
