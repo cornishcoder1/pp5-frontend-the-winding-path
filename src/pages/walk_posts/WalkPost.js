@@ -15,7 +15,7 @@ const WalkPost = (props) => {
         owner,
         profile_id,
         profile_image,
-        comments_count,
+        walk_comments_count,
         posts_saved_count,
         save_id,
         title,
@@ -145,7 +145,7 @@ const WalkPost = (props) => {
                 <Link to={`/walk-posts/${id}`}>
                     <i className="far fa-comments" />
                 </Link>
-                {comments_count}               
+                {walk_comments_count}               
             </div>
         </Card.Body>
     </Card>

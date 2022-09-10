@@ -10,9 +10,16 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import WalkPost from "./WalkPost";
 
+import WalkPostCommentCreateForm from "../comments/WalkPostCommentCreateForm";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
 function WalkPostPage() {
     const { id } = useParams();
     const [walkPost, setWalkPost] = useState({ results: [] });
+
+    const currentUser = useCurrentUser();
+    const profile_image = currentUser?.profile_image;
+    const [walkComments, setWalkComments] = useState({ results: [] });
 
     useEffect(() => {
         const handleMount = async () => {
@@ -37,7 +44,17 @@ function WalkPostPage() {
         <p>Popular profiles for mobile</p>
         <WalkPost {...walkPost.results[0]} setWalkPosts={setWalkPost} WalkPostPage />
         <Container className={appStyles.Content}>
-          Comments
+          {currentUser ? (
+            <WalkPostCommentCreateForm
+            profile_id={currentUser.profile_id}
+            profileImage={profile_image}
+            walk_post={id}
+            setWalkPost={setWalkPost}
+            setWalkComments={setWalkComments}
+          />
+          ) : walkComments.results.length ? (
+            "Comments"
+          ) : null}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">

@@ -16,7 +16,7 @@ const GalleryPost = (props) => {
         owner,
         profile_id,
         profile_image,
-        comments_count,
+        gallery_comments_count,
         gallery_likes_count,
         like_id,
         title,
@@ -135,7 +135,7 @@ const GalleryPost = (props) => {
                 <Link to={`/gallery-posts/${id}`}>
                     <i className="far fa-comments" />
                 </Link>
-                {comments_count}
+                {gallery_comments_count}
             </div>
         </Card.Body>
     </Card>
