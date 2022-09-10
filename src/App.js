@@ -13,6 +13,8 @@ import WalkPostPage from './pages/walk_posts/WalkPostPage';
 import WalkPostsPage from './pages/walk_posts/WalkPostsPage';
 import { useCurrentUser } from './contexts/CurrentUserContext';
 import GalleryPostsPage from './pages/gallery_posts/GalleryPostsPage';
+import GalleryPostEditForm from './pages/gallery_posts/GalleryPostEditForm';
+import WalkPostEditForm from './pages/walk_posts/WalkPostEditForm';
 
 function App() {
 	const currentUser = useCurrentUser();
@@ -62,8 +64,12 @@ function App() {
 					<Route exact path="/signup" render={() => <SignUpForm />} />
 					<Route exact path="/gallery-posts/create"
 					render={() => <GalleryPostCreateForm />} />
+					<Route exact path="/gallery-posts/:id/edit"
+					render={() => <GalleryPostEditForm /> } />
 					<Route exact path="/walk-posts/create"
 					render={() => <WalkPostCreateForm />} />
+					<Route exact path="/walk-posts/:id/edit"
+					render={() => <WalkPostEditForm /> } />
 					<Route exact path="/gallery-posts/:id"
 					render={() => <GalleryPostPage />} />
 					<Route exact path="/walk-posts/:id"
