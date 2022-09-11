@@ -60,7 +60,12 @@ function GalleryPostPage() {
           ) : null}
           {galleryComments.results.length ? (
             galleryComments.results.map((galleryComment) => (
-              <GalleryComment key={galleryComment.id} {...galleryComment} />
+              <GalleryComment
+              key={galleryComment.id}
+              {...galleryComment}
+              setGalleryPost={setGalleryPost}
+              setGalleryComments={setGalleryComments}
+              />
             ))
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>

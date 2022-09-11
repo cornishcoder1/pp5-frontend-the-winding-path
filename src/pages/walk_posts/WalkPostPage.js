@@ -60,7 +60,12 @@ function WalkPostPage() {
           ) : null}
           {walkComments.results.length ? (
             walkComments.results.map((walkComment) => (
-              <WalkComment key={walkComment.id} {...walkComment} />
+              <WalkComment
+              key={walkComment.id}
+              {...walkComment}
+              setWalkPost={setWalkPost}
+              setWalkComments={setWalkComments} 
+            />
             ))
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
