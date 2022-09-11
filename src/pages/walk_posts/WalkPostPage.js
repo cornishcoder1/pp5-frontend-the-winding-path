@@ -13,6 +13,9 @@ import WalkPost from "./WalkPost";
 import WalkPostCommentCreateForm from "../comments/WalkPostCommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import WalkComment from "../comments/WalkComment";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
 
 function WalkPostPage() {
     const { id } = useParams();
@@ -59,14 +62,20 @@ function WalkPostPage() {
             "Comments"
           ) : null}
           {walkComments.results.length ? (
-            walkComments.results.map((walkComment) => (
-              <WalkComment
-              key={walkComment.id}
-              {...walkComment}
-              setWalkPost={setWalkPost}
-              setWalkComments={setWalkComments} 
+            <InfiniteScroll
+            children={walkComments.results.map((walkComment) => (
+            <WalkComment
+            key={walkComment.id}
+            {...walkComment}
+            setWalkPost={setWalkPost}
+            setWalkComments={setWalkComments}
             />
-            ))
+          ))}
+          dataLength={walkComments.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!walkComments.next}
+          next={() => fetchMoreData(walkComments, setWalkComments)}
+        />      
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
           ) : (

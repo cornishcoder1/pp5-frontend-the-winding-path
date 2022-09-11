@@ -13,6 +13,9 @@ import GalleryPost from "./GalleryPost";
 import GalleryPostCommentCreateForm from "../comments/GalleryPostCommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import GalleryComment from "../comments/GalleryComment";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Asset from "../../components/Asset";
+import { fetchMoreData } from "../../utils/utils";
 
 function GalleryPostPage() {
 
@@ -59,14 +62,20 @@ function GalleryPostPage() {
             "Comments"
           ) : null}
           {galleryComments.results.length ? (
-            galleryComments.results.map((galleryComment) => (
+            <InfiniteScroll
+              children={galleryComments.results.map((galleryComment) => (
               <GalleryComment
               key={galleryComment.id}
               {...galleryComment}
               setGalleryPost={setGalleryPost}
               setGalleryComments={setGalleryComments}
               />
-            ))
+            ))}
+            dataLength={galleryComments.results.length}
+            loader={<Asset spinner />}
+            hasMore={!!galleryComments.next}
+            next={() => fetchMoreData(galleryComments, setGalleryComments)}
+          />      
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
           ) : (
