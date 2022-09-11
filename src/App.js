@@ -16,6 +16,10 @@ import GalleryPostsPage from './pages/gallery_posts/GalleryPostsPage';
 import GalleryPostEditForm from './pages/gallery_posts/GalleryPostEditForm';
 import WalkPostEditForm from './pages/walk_posts/WalkPostEditForm';
 import ProfilePage from './pages/profiles/ProfilePage';
+import UsernameForm from "./pages/profiles/UserNameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+
 
 function App() {
 	const currentUser = useCurrentUser();
@@ -77,6 +81,21 @@ function App() {
 					render={() => <WalkPostPage />} />
 					<Route exact path="/profiles/:id"
 					render={() => <ProfilePage />} />
+					<Route
+					exact
+					path="/profiles/:id/edit/username"
+					render={() => <UsernameForm />}
+					/>
+					<Route
+					exact
+					path="/profiles/:id/edit/password"
+					render={() => <UserPasswordForm />}
+					/>
+					<Route
+					exact
+					path="/profiles/:id/edit"
+					render={() => <ProfileEditForm />}
+					/>
 					<Route render={() => <p>Page not found!</p>} />
 				</Switch>
 			</Container>
