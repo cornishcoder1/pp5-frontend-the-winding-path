@@ -15,6 +15,7 @@ import { useCurrentUser } from './contexts/CurrentUserContext';
 import GalleryPostsPage from './pages/gallery_posts/GalleryPostsPage';
 import GalleryPostEditForm from './pages/gallery_posts/GalleryPostEditForm';
 import WalkPostEditForm from './pages/walk_posts/WalkPostEditForm';
+import ProfilePage from './pages/profiles/ProfilePage';
 
 function App() {
 	const currentUser = useCurrentUser();
@@ -74,6 +75,8 @@ function App() {
 					render={() => <GalleryPostPage />} />
 					<Route exact path="/walk-posts/:id"
 					render={() => <WalkPostPage />} />
+					<Route exact path="/profiles/:id"
+					render={() => <ProfilePage />} />
 					<Route render={() => <p>Page not found!</p>} />
 				</Switch>
 			</Container>

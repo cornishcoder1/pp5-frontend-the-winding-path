@@ -5,6 +5,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CurrentUserProvider } from './contexts/CurrentUserContext';
+import { ProfileDataProvider } from './contexts/ProfileDataContext';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -12,9 +13,11 @@ const root = createRoot(rootElement);
 root.render(
 	<Router>
 		<CurrentUserProvider>
-			<App />  
+			<ProfileDataProvider>
+				<App />  
+			</ProfileDataProvider>
 		</CurrentUserProvider>
-	</Router>,
+	</Router>
 );
 
 
