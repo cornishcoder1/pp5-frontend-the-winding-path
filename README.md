@@ -39,6 +39,8 @@ Implement manual testing and document the procedures and results.
 
 ## Unfixed
 
+- Edit Profile form not submitting correctly due to Location field
+
 ***
 
 # Technologies Used
