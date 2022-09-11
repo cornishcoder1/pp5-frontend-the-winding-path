@@ -16,6 +16,7 @@ import WalkComment from "../comments/WalkComment";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
+import WhoToFollow from "../profiles/WhoToFollow";
 
 function WalkPostPage() {
     const { id } = useParams();
@@ -47,7 +48,7 @@ function WalkPostPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
+        <WhoToFollow mobile />
         <WalkPost {...walkPost.results[0]} setWalkPosts={setWalkPost} WalkPostPage />
         <Container className={appStyles.Content}>
           {currentUser ? (
@@ -84,7 +85,7 @@ function WalkPostPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
+      <WhoToFollow />
       </Col>
     </Row>
   );
