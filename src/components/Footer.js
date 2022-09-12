@@ -11,7 +11,7 @@ const Footer = () => {
                     <NavLink
                         className={`${styles.NavLink} pt-0`}
                         activeclassname={styles.Active}
-                        to="/contact-us"
+                        to="/contact"
                         >
                         <Col>
                         <i className="fa-solid fa-envelope"></i>
