@@ -81,7 +81,7 @@ function GalleryPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
-        {errors?.title?.map((message, idx) => (
+        {errors.title?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -101,7 +101,7 @@ function GalleryPostCreateForm() {
                     <option value="photography">Photography</option>
                 </Form.Control>
         </Form.Group>
-        {errors?.category?.map((message, idx) => (
+        {errors.category?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -117,7 +117,7 @@ function GalleryPostCreateForm() {
                 onChange={handleChange}
                 />
         </Form.Group>
-        {errors?.content?.map((message, idx) => (
+        {errors.content?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>

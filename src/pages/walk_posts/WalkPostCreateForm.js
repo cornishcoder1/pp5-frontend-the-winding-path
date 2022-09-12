@@ -102,7 +102,7 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
-        {errors?.title?.map((message, idx) => (
+        {errors.title?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -117,7 +117,7 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
-        {errors?.headline?.map((message, idx) => (
+        {errors.headline?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -143,7 +143,7 @@ function WalkPostCreateForm() {
                     <option value="other">Other</option>
                 </Form.Control>
         </Form.Group>
-        {errors?.environment?.map((message, idx) => (
+        {errors.environment?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -163,7 +163,7 @@ function WalkPostCreateForm() {
                     <option value="no">No</option>
                 </Form.Control>
         </Form.Group>
-        {errors?.wc?.map((message, idx) => (
+        {errors.wc?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -184,7 +184,7 @@ function WalkPostCreateForm() {
                     <option value="no">No</option>
                 </Form.Control>
         </Form.Group>
-        {errors?.dog_friendly?.map((message, idx) => (
+        {errors.dog_friendly?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -206,7 +206,7 @@ function WalkPostCreateForm() {
                     <option value="challenging">Challenging</option>
                 </Form.Control>
         </Form.Group>
-        {errors?.difficulty?.map((message, idx) => (
+        {errors.difficulty?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -222,7 +222,7 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
-        {errors?.length?.map((message, idx) => (
+        {errors.length?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -238,7 +238,7 @@ function WalkPostCreateForm() {
             onChange={handleChange}
             />
         </Form.Group>
-        {errors?.duration?.map((message, idx) => (
+        {errors.duration?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>
@@ -254,7 +254,7 @@ function WalkPostCreateForm() {
                 onChange={handleChange}
                 />
         </Form.Group>
-        {errors?.content?.map((message, idx) => (
+        {errors.content?.map((message, idx) => (
           <Alert variant="danger" key={idx}>
             {message}
           </Alert>

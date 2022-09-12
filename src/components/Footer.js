@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Navbar} from 'react-bootstrap';
+import { Col, Container, Navbar, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 import styles from "../styles/Footer.module.css";
 
@@ -14,9 +14,11 @@ const Footer = () => {
                         activeclassname={styles.Active}
                         to="/contact/"
                         >
-                        
+                        <OverlayTrigger placement="top"
+                        overlay={<Tooltip>Contact Us</Tooltip>}
+                        >
                         <i className="fa-solid fa-envelope"></i>
-                        
+                        </OverlayTrigger>
                     </NavLink>
                     </Col>
                 </Container>
@@ -26,3 +28,4 @@ const Footer = () => {
 }
 
 export default Footer
+

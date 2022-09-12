@@ -99,7 +99,7 @@ const ContactForm = () => {
             <Form.Group>
               <Form.Label>Message</Form.Label>
               <Form.Control
-                as ="textarea"
+                as="textarea"
                 rows={6}
                 name="content"
                 value={content}
