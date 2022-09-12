@@ -28,6 +28,8 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
   const history = useHistory();
 
+  // const [show, setShow] = useState(false);
+
   const handleChange = (event) => {
     setContactData({
       ...contactData,
@@ -45,8 +47,22 @@ const ContactForm = () => {
     }
   };
 
+  
+  // if (show) {
+  //   return (
+  //     <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+  //       <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+  //       <p>
+  //         Change this and that and try again. Duis mollis, est non commodo
+  //         luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+  //         Cras mattis consectetur purus sit amet fermentum.
+  //       </p>
+  //     </Alert>
+  //   );
+  // }
   return (    
     <Row className={styles.Row}>
+      
       <Col>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>Contact Us</h1>
@@ -114,7 +130,9 @@ const ContactForm = () => {
 
             <Button
             className={btnStyles.Button}
-            type="submit">
+            type="submit"
+            // onClick={() => setShow(true)}
+            >
               Submit
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
