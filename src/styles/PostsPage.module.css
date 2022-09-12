@@ -1,3 +1,11 @@
+.buttonBar {
+  border-radius: 2px;
+  margin-bottom: 16px;
+  
+  width: 50%;
+  /* text-align: center; */
+}
+
 .SearchBar input {
     border-radius: 20px;
     color: #242a3d;
@@ -16,3 +24,5 @@
     cursor: default;
     color: #cfced3;
   }
+
+  

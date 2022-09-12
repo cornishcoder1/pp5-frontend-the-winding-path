@@ -10,6 +10,7 @@ import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
+import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -17,6 +18,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import WhoToFollow from "../profiles/WhoToFollow";
+import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 function WalkPostsPage({ message, filter = "" }) {
     const[walkPosts, setWalkPosts] = useState({results: []});
@@ -24,6 +26,31 @@ function WalkPostsPage({ message, filter = "" }) {
     const { pathname } = useLocation();
 
     const [query, setQuery] = useState("");
+
+    const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
+
+    const addWalk = (
+      <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/walk-posts/create"
+      >
+        <i className="fa-solid fa-person-circle-plus"></i>
+        {/* Add walk */}
+      </NavLink>
+    )
+  
+    const addGalleryPost = (
+      <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/gallery-posts/create"
+      >
+        <i className="fa-regular fa-square-plus"></i>
+        {/* Add gallery post */}
+      </NavLink>
+    )
 
     useEffect(() => {
         const fetchWalkPosts = async () => {
@@ -49,8 +76,14 @@ function WalkPostsPage({ message, filter = "" }) {
       return (
         <Row className="h-100">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
-            <p>Add post buttons here?</p>
+            <Container className={`${styles.buttonBar} ${appStyles.Content} text-center p-4`}>
+             
+            {currentUser && addWalk}
+            {currentUser && addGalleryPost}
+            </Container>
+            
             <WhoToFollow mobile />
+
             <i className={`fas fa-search ${styles.SearchIcon}`} />
             <Form
               className={styles.SearchBar}

@@ -24,27 +24,27 @@ const NavBar = () => {
     }
   };
 
-  const addWalk = (
-    <NavLink
-    className={styles.NavLink}
-    activeClassName={styles.Active}
-    to="/walk-posts/create"
-    >
-      <i className="fa-solid fa-person-circle-plus"></i>
-      {/* Add walk */}
-    </NavLink>
-  )
+  // const addWalk = (
+  //   <NavLink
+  //   className={styles.NavLink}
+  //   activeClassName={styles.Active}
+  //   to="/walk-posts/create"
+  //   >
+  //     <i className="fa-solid fa-person-circle-plus"></i>
+  //     {/* Add walk */}
+  //   </NavLink>
+  // )
 
-  const addGalleryPost = (
-    <NavLink
-    className={styles.NavLink}
-    activeClassName={styles.Active}
-    to="/gallery-posts/create"
-    >
-      <i className="fa-regular fa-square-plus"></i>
-      {/* Add gallery post */}
-    </NavLink>
-  )
+  // const addGalleryPost = (
+  //   <NavLink
+  //   className={styles.NavLink}
+  //   activeClassName={styles.Active}
+  //   to="/gallery-posts/create"
+  //   >
+  //     <i className="fa-regular fa-square-plus"></i>
+  //     {/* Add gallery post */}
+  //   </NavLink>
+  // )
 
 
   const loggedInIcons = <>
@@ -124,7 +124,7 @@ const NavBar = () => {
         
         <Nav className="text-right">
           <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
-            <Navbar.Brand className='logo'><img src={logo} alt="logo" height="45" />
+            <Navbar.Brand className='logo'><img src={logo} alt="logo" height="30" />
               </Navbar.Brand>
               The Winding Path    
               </NavLink>
@@ -135,8 +135,8 @@ const NavBar = () => {
         aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left"> 
-            {currentUser && addWalk}
-            {currentUser && addGalleryPost}
+            {/* {currentUser && addWalk}
+            {currentUser && addGalleryPost} */}
             <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
              
               <i className="fa-solid fa-house-chimney"></i>
