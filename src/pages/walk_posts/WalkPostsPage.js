@@ -76,7 +76,8 @@ function WalkPostsPage({ message, filter = "" }) {
       return (
         <Row className="h-100">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
-            <Container className={`${styles.buttonBar} ${appStyles.Content} text-center p-4`}>
+
+            <Container className='pb-4'>
              
             {currentUser && addWalk}
             {currentUser && addGalleryPost}
