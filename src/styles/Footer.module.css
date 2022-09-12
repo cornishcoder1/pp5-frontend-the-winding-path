@@ -1,0 +1,11 @@
+.Footer {
+    height: 50px;
+    background-color: #F8FFF8;
+    /* border: 1px solid #dadadf; */
+    box-shadow: 5px 2px 0px #dadadf;
+    /* margin-bottom: 0.25rem; */
+}
+
+.Navlink {
+    padding-top: 0;
+}
