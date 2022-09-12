@@ -1,5 +1,6 @@
 import React from 'react'
-import { Col, Container, Navbar, NavLink } from 'react-bootstrap';
+import { Col, Container, Navbar} from 'react-bootstrap';
+import { NavLink } from "react-router-dom";
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
@@ -11,12 +12,12 @@ const Footer = () => {
                     <NavLink
                         className={`${styles.NavLink} pt-0`}
                         activeclassname={styles.Active}
-                        to="/contact"
+                        to="/contact/"
                         >
-                        <Col>
+                        
                         <i className="fa-solid fa-envelope"></i>
-                        </Col>
-                        </NavLink>
+                        
+                    </NavLink>
                     </Col>
                 </Container>
             </Navbar>

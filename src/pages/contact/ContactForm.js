@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -13,40 +13,35 @@ import {
   Container,
   Alert
 } from "react-bootstrap";
-import axios from "axios";
-import { useRedirect } from "../../hooks/useRedirect";
+import { axiosReq } from "../../api/axiosDefaults";
+
 
 const ContactForm = () => {
-  useRedirect('/');
   const [contactData, setContactData] = useState({
     fname: "",
     lname: "",
     email: "",
     content: "",
   });
+
   const { fname, lname, email, content } = contactData;
   const [errors, setErrors] = useState({});
   const history = useHistory();
 
+  const handleChange = (event) => {
+    setContactData({
+      ...contactData,
+      [event.target.name]: event.target.value,
+    });
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
-
-    formData.append("fname", fname);
-    formData.append("lname", lname);
-    formData.append("email", email);
-    formData.append("content", content);
-
-
     try {
-      const { formData } = await axiosReq.post("/contact/", formData);
-      history.push('/');
+      await axiosReq.post("/contact/", contactData);
+      history.push("/");
     } catch (err) {
-      console.log(err);
-      if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
-      }
+      setErrors(err.response?.data);
     }
   };
 
@@ -57,13 +52,12 @@ const ContactForm = () => {
           <h1 className={styles.Header}>Contact Us</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
-              <Form.Label>First Name</Form.Label>
+              <Form.Label>First name</Form.Label>
               <Form.Control
                 type="text"
-                // placeholder="Username"
                 name="fname"
-                
-                // onChange={handleChange}
+                value={fname}
+                onChange={handleChange}
               />
             </Form.Group>
             {errors.fname?.map((message, idx) => (
@@ -73,15 +67,16 @@ const ContactForm = () => {
             ))}
 
             <Form.Group>
-              <Form.Label>Last Name</Form.Label>
+              <Form.Label>Last name</Form.Label>
               <Form.Control
-              type="text"
-            //   placeholder="Password"
-              name="lname"
+                type="text"
+                name="lname"
+                value={lname}
+                onChange={handleChange}
               />
             </Form.Group>
             {errors.lname?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+              <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
             ))}
@@ -89,13 +84,14 @@ const ContactForm = () => {
             <Form.Group>
               <Form.Label>Email</Form.Label>
               <Form.Control
-              type="email"
-            //   placeholder="Password"
-              name="email"
+                type="text"
+                name="email"
+                value={email}
+                onChange={handleChange}
               />
             </Form.Group>
             {errors.email?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+              <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
             ))}
@@ -103,13 +99,15 @@ const ContactForm = () => {
             <Form.Group>
               <Form.Label>Message</Form.Label>
               <Form.Control
-              type="textarea"
-            //   placeholder="Password"
-              name="content"
+                as ="textarea"
+                rows={6}
+                name="content"
+                value={content}
+                onChange={handleChange}
               />
             </Form.Group>
             {errors.content?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+              <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
             ))}
