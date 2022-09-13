@@ -16,8 +16,10 @@ import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function GalleryPostsPage({ message, filter = "" }) {
+    useRedirect("loggedOut");
     const[galleryPosts, setGalleryPosts] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();

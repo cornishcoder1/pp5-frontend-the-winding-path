@@ -19,8 +19,10 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import WhoToFollow from "../profiles/WhoToFollow";
 import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function WalkPostsPage({ message, filter = "" }) {
+    useRedirect("loggedOut");
     const[walkPosts, setWalkPosts] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
