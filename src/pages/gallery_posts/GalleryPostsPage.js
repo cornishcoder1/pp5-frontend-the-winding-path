@@ -10,6 +10,7 @@ import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
+import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -17,6 +18,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import { useRedirect } from "../../hooks/useRedirect";
+import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 function GalleryPostsPage({ message, filter = "" }) {
     useRedirect("loggedOut");
@@ -25,6 +27,20 @@ function GalleryPostsPage({ message, filter = "" }) {
     const { pathname } = useLocation();
 
     const [query, setQuery] = useState("");
+
+    const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
+
+    const addGalleryPost = (
+      <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/gallery-posts/create"
+      >
+        <i className="fa-regular fa-square-plus"></i>
+        Add gallery post
+      </NavLink>
+    )
 
     useEffect(() => {
         const fetchGalleryPosts = async () => {
@@ -50,6 +66,9 @@ function GalleryPostsPage({ message, filter = "" }) {
       return (
         <Row className="h-100">
           <Col className="py-2 p-0 p-lg-2" lg={8}>
+            <Container className='pb-4'>
+              {currentUser && addGalleryPost}
+              </Container>
             <p>Popular profiles mobile</p>
             <i className={`fas fa-search ${styles.SearchIcon}`} />
             <Form

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav, } from 'react-bootstrap';
+import { Navbar, Container, Nav, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -48,14 +48,18 @@ const NavBar = () => {
 
 
   const loggedInIcons = <>
+
     <NavLink
     className={styles.NavLink}
     activeClassName={styles.Active}
     to="/gallery-posts"
 
     >
+      <OverlayTrigger placement="bottom"
+      overlay={<Tooltip>Gallery</Tooltip>}
+      >
       <i className="fa-solid fa-paintbrush"></i>
-      <span className={styles.span}>Gallery</span>
+      </OverlayTrigger>
       {/* Gallery */}
     </NavLink>
 
@@ -63,10 +67,13 @@ const NavBar = () => {
     className={styles.NavLink}
     activeClassName={styles.Active}
     to="/following"
-
     >
+      <OverlayTrigger placement="bottom"
+      overlay={<Tooltip>Following</Tooltip>}
+      >
       <i className="fa-solid fa-users"></i>
-      Following
+      </OverlayTrigger>
+      {/* Following */}
     </NavLink>
 
     <NavLink
@@ -75,8 +82,12 @@ const NavBar = () => {
     to="/saved-walks"
 
     >
+      <OverlayTrigger placement="bottom"
+      overlay={<Tooltip>Saved Walks</Tooltip>}
+      >
       <i className="fa-solid fa-bookmark"></i>
-      Saved Walks
+      </OverlayTrigger>
+      {/* Saved Walks */}
     </NavLink>
 
     <NavLink
@@ -84,8 +95,12 @@ const NavBar = () => {
     to="/"
     onClick={handleSignOut}
     >
+      <OverlayTrigger placement="bottom"
+      overlay={<Tooltip>Log out</Tooltip>}
+      >
       <i className="fa-solid fa-sign-out-alt"></i>
-      Log out
+      </OverlayTrigger>
+      {/* Log out */}
     </NavLink>
 
     <NavLink
@@ -106,14 +121,24 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/login"
     >
-      <i className="fa-solid fa-right-to-bracket"></i>Log in
+      <OverlayTrigger placement="bottom"
+      overlay={<Tooltip>Log in</Tooltip>}
+      >
+      <i className="fa-solid fa-right-to-bracket"></i>
+      </OverlayTrigger>
+      {/* Log in */}
     </NavLink>
     <NavLink
     className={styles.NavLink}
     activeClassName={styles.Active}
     to="/signup"
     >
-      <i className="fa-solid fa-pen-to-square"></i>Sign up
+      <OverlayTrigger placement="bottom"
+      overlay={<Tooltip>Sign up</Tooltip>}
+      >
+      <i className="fa-solid fa-pen-to-square"></i>
+      </OverlayTrigger>
+      {/* Sign up */}
     </NavLink>
   </>
   );
@@ -137,10 +162,18 @@ const NavBar = () => {
           <Nav className="ml-auto text-left"> 
             {/* {currentUser && addWalk}
             {currentUser && addGalleryPost} */}
-            <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
-             
+            <NavLink
+            exact
+            className={styles.NavLink}
+            activeClassName={styles.Active}
+            to="/"
+            >
+              <OverlayTrigger placement="bottom"
+              overlay={<Tooltip>Home</Tooltip>}
+              >
               <i className="fa-solid fa-house-chimney"></i>
-              Home     
+              </OverlayTrigger>
+              {/* Home      */}
             </NavLink>     
                   
             {currentUser ? loggedInIcons : loggedOutIcons}

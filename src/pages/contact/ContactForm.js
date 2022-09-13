@@ -103,7 +103,7 @@ const ContactForm = () => {
               <Form.Label>Message</Form.Label>
               <Form.Control
                 as="textarea"
-                rows={6}
+                rows={4}
                 name="content"
                 value={content}
                 onChange={handleChange}

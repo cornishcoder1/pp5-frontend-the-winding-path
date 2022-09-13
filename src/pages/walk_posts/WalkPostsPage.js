@@ -39,20 +39,20 @@ function WalkPostsPage({ message, filter = "" }) {
       to="/walk-posts/create"
       >
         <i className="fa-solid fa-person-circle-plus"></i>
-        {/* Add walk */}
+        Add walk
       </NavLink>
     )
   
-    const addGalleryPost = (
-      <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/gallery-posts/create"
-      >
-        <i className="fa-regular fa-square-plus"></i>
-        {/* Add gallery post */}
-      </NavLink>
-    )
+    // const addGalleryPost = (
+    //   <NavLink
+    //   className={styles.NavLink}
+    //   activeClassName={styles.Active}
+    //   to="/gallery-posts/create"
+    //   >
+    //     <i className="fa-regular fa-square-plus"></i>
+    //     {/* Add gallery post */}
+    //   </NavLink>
+    // )
 
     useEffect(() => {
         const fetchWalkPosts = async () => {
@@ -82,7 +82,7 @@ function WalkPostsPage({ message, filter = "" }) {
             <Container className='pb-4'>
              
             {currentUser && addWalk}
-            {currentUser && addGalleryPost}
+            {/* {currentUser && addGalleryPost} */}
             </Container>
             
             <WhoToFollow mobile />
