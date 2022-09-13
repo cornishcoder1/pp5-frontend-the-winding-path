@@ -21,6 +21,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import Footer from './components/Footer';
 import ContactForm from './pages/contact/ContactForm';
+import Confirmation from './pages/contact/Confirmation';
 
 
 function App() {
@@ -99,6 +100,7 @@ function App() {
 					render={() => <ProfileEditForm />}
 					/>
 					<Route exact path="/contact" render={() => <ContactForm />} />
+					<Route exact path="/confirmation" render={() => <Confirmation />} />
 					<Route render={() => <p>Page not found!</p>} />
 						
 				</Switch>
