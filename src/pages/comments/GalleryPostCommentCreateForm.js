@@ -60,9 +60,9 @@ function GalleryPostCommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={`${styles.Button} btn d-block ml-auto`}
-        disabled={!content.trim()}
+        className={`${styles.Button} d-block ml-auto`}
         type="submit"
+        disabled={!content.trim()}
       >
         post
       </button>

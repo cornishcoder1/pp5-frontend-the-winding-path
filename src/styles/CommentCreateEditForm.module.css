@@ -1,20 +1,35 @@
 .Form {
     border: none;
-    border-bottom: 2px #00d1ff solid;
+    border-bottom: 2px #095B6D solid;
   }
-  
+
   .Button {
-    border: none;
-    background-color: #242a3d;
-    color: aliceblue;
+    font-size: 1em;
+    align-self: center;
     border-radius: 100px;
+    border-color: transparent;
     padding: 4px 10px;
+    margin: 0 2px;
     min-width: 75px;
-    margin: 5px;
+    background-color: #406975;
+    color: white;
   }
   
   .Button:hover {
+    opacity: 0.8;
+    border-color: transparent;
     cursor: pointer;
-    background-color: aliceblue;
-    color: #242a3d;
+    background-color: #2F4858;
+  }
+    
+  .Button:hover:active {
+    background-color: #2F4858 !important;
+  }
+    
+  .Button:active {
+    background-color: #2F4858!important;
+  }
+    
+  .Button:focus {
+    background-color: #2F4858;
   }
