@@ -161,6 +161,7 @@ function WalkPostCreateForm() {
                 >
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
+                    <option value="unknown">Unknown</option>
                 </Form.Control>
         </Form.Group>
         {errors.wc?.map((message, idx) => (
@@ -182,6 +183,7 @@ function WalkPostCreateForm() {
                 >
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
+                    <option value="unknown">Unknown</option>
                 </Form.Control>
         </Form.Group>
         {errors.dog_friendly?.map((message, idx) => (
@@ -204,6 +206,7 @@ function WalkPostCreateForm() {
                     <option value="easy">Easy</option>
                     <option value="moderate">Moderate</option>
                     <option value="challenging">Challenging</option>
+                    <option value="unknown">Unknown</option>
                 </Form.Control>
         </Form.Group>
         {errors.difficulty?.map((message, idx) => (
