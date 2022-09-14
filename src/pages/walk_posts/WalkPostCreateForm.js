@@ -274,8 +274,8 @@ function WalkPostCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+      <Row className={styles.Row}>
+        <Col md={7} lg={8}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
@@ -314,12 +314,21 @@ function WalkPostCreateForm() {
                 ref={imageInput}
               />
             </Form.Group>
-            <div className="d-md-none">{textFields}</div>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}    
+
+            
+          </Container>
+          <Container className={`${appStyles.Content} ${styles.Container} mt-4 mb-4`}>
+            {textFields}
           </Container>
         </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+        {/* <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
           <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
+        </Col> */}
       </Row>
     </Form>
   );
