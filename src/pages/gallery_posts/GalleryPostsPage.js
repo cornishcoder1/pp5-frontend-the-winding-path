@@ -22,6 +22,7 @@ import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserCon
 
 function GalleryPostsPage({ message, filter = "" }) {
     useRedirect("loggedOut");
+
     const[galleryPosts, setGalleryPosts] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
@@ -64,12 +65,11 @@ function GalleryPostsPage({ message, filter = "" }) {
       }, [filter, query, pathname]);
   
       return (
-        <Row className="h-100">
-          <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <Row className={styles.Row}>
+          <Col lg={8}>
             <Container className='pb-4'>
               {currentUser && addGalleryPost}
               </Container>
-            <p>Popular profiles mobile</p>
             <i className={`fas fa-search ${styles.SearchIcon}`} />
             <Form
               className={styles.SearchBar}
@@ -111,11 +111,20 @@ function GalleryPostsPage({ message, filter = "" }) {
               </Container>
             )}
           </Col>
-          <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-            <p>Popular profiles for desktop</p>
-          </Col>
         </Row>
       );
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default GalleryPostsPage;
