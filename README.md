@@ -37,6 +37,8 @@ Implement manual testing and document the procedures and results.
 
 ## Fixed
 
+- When Creating a walk post, the choice fields on the form could be left at their default values with the form submitting without any problems. However, in the walk post edit form an error would be thrown on submission if these fields were not updated by the user. The error message was "'unknown' is not a valid option", despite it being listed as an option on the form and in WalkPostCreateForm.js and WalkPostEditForm.js. After several attempts to fix this bug by modifying code in the backend, I realised the value 'unknown' was missing from the choice arrays in the Walk Post model. I added this value to the relevant arrays, migrated the changes to the database and performed a Git add, commit and push. I then created a new post, went to the edit form and submitted without changing the relevant choice fields. The form submitted and updated successfully with no errors shown.
+
 ## Unfixed
 
 - Edit Profile form not submitting correctly due to Location field
