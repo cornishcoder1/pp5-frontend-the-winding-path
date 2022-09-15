@@ -129,10 +129,10 @@ function WalkPostCreateForm() {
                 as="select"
                 defaultValue="Choose..."
                 name="environment"
-                value={environment}
                 onChange={handleChange}
                 aria-label="environment"
                 >
+                    <option value="other">Other</option>
                     <option value="coastal">Coastal</option>
                     <option value="countryside">Countryside</option>
                     <option value="hill">Hill</option>
@@ -140,7 +140,7 @@ function WalkPostCreateForm() {
                     <option value="mountain">Mountain</option>
                     <option value="peak">Peak</option>
                     <option value="woodland">Woodland</option>
-                    <option value="other">Other</option>
+                    
                 </Form.Control>
         </Form.Group>
         {errors.environment?.map((message, idx) => (
@@ -155,13 +155,11 @@ function WalkPostCreateForm() {
                 as="select"
                 defaultValue="Choose..."
                 name="wc"
-                value={wc}
                 onChange={handleChange}
                 aria-label="wc"
-                >
+                >   <option value="unknown">Unknown</option>
                     <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                    <option value="unknown">Unknown</option>
+                    <option value="no">No</option>                    
                 </Form.Control>
         </Form.Group>
         {errors.wc?.map((message, idx) => (
@@ -177,13 +175,11 @@ function WalkPostCreateForm() {
                 as="select"
                 defaultValue="Choose..."
                 name="dog_friendly"
-                value={dog_friendly}
                 onChange={handleChange}
                 aria-label="dog_friendly"
-                >
+                >   <option value="unknown">Unknown</option>
                     <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                    <option value="unknown">Unknown</option>
+                    <option value="no">No</option>   
                 </Form.Control>
         </Form.Group>
         {errors.dog_friendly?.map((message, idx) => (
@@ -192,21 +188,19 @@ function WalkPostCreateForm() {
           </Alert>
         ))}
 
-
         <Form.Group>
             <Form.Label>Difficulty</Form.Label>
                 <Form.Control
                 as="select"
                 defaultValue="Choose..."
                 name="difficulty"
-                value={difficulty}
                 onChange={handleChange}
                 aria-label="difficulty"
                 >
+                    <option value="unknown">Unknown</option>
                     <option value="easy">Easy</option>
                     <option value="moderate">Moderate</option>
-                    <option value="challenging">Challenging</option>
-                    <option value="unknown">Unknown</option>
+                    <option value="challenging">Challenging</option>      
                 </Form.Control>
         </Form.Group>
         {errors.difficulty?.map((message, idx) => (
