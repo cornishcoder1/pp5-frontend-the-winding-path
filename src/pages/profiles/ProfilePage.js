@@ -127,11 +127,19 @@ function ProfilePage() {
     </>
   );
 
-  const mainProfilePosts = (
+  const userWalkPostsHeader = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s walk posts</p>
-      <hr />
+        <p className="text-center">{profile?.owner}'s walk posts</p>
+        <hr />
+    </>
+  )
+
+  const mainProfilePosts = (
+    <>
+        {/* <hr />
+        <p className="text-center">{profile?.owner}'s walk posts</p>
+        <hr /> */}
       {profilePosts.results.length ? (
         <InfiniteScroll
           children={profilePosts.results.map((post) => (
@@ -167,7 +175,10 @@ function ProfilePage() {
         </Container>
       </Col>
         <Col className="py-2 p-0 p-lg-2" lg={8}>
-          <Container className={appStyles.Content}>
+        <Container>
+            {userWalkPostsHeader}
+          </Container>
+          <Container className={styles.Post}>
             {hasLoaded ? (
               <>
                 {/* {mainProfile} */}

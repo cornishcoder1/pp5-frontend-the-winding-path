@@ -9,6 +9,11 @@
   display: flex;
   justify-content: center;
 }
+
+.Post {
+  background-color: #D9F4C7;
+  border: none;
+}
   
   @media screen and (max-width: 991px) {
     .ProfileImage {
