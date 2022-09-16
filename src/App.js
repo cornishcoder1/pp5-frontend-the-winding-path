@@ -104,7 +104,6 @@ function App() {
 					<Route render={() => <p>Page not found!</p>} />
 						
 				</Switch>
-			{/* <Footer />	 */}
 			</Container>
 		</div>
 	);
