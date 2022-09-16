@@ -75,6 +75,13 @@ function ProfilePage() {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
+            <p className="m-2 text-center">
+                <i className="fa-solid fa-location-dot" />{profile?.location}{' '}
+            </p>
+            <hr />
+            <p>{profile?.bio}</p>
+            <hr />
+          
           <Row className="justify-content-center no-gutters">
             <Col xs={4} className="my-2">
               <div>{profile?.walk_posts_count}</div>
