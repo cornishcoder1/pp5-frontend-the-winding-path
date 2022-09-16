@@ -130,12 +130,20 @@ const WalkPost = (props) => {
             <Card.Img src={image} alt={title} />
         </Link>
         <Card.Body>
-            {updated_on && <Card.Title className="text-centre">{updated_on}</Card.Title>} 
-            {title && <Card.Title className="text-centre">{title}</Card.Title>}
+            {updated_on && <Card.Text className="text-centre">{updated_on}</Card.Text>} 
+            {title && <Card.Title className="text-centre"><strong>{title}</strong></Card.Title>}
             {headline && <Card.Text className={styles.Headline}>{headline}</Card.Text>} 
-            <p>Environment: {environment}</p>
-            <p>WC en-route?: {wc}</p>
-            <p>Dog-friendly?: {dog_friendly}</p>
+            <p>
+              <i className="fa-solid fa-tree" />
+              Walk Environment: {environment}</p>
+            <p>
+              <i className="fa-solid fa-restroom" />
+              WC en-route?: {wc}
+            </p>
+            <p>
+              <i className="fa-solid fa-dog" />
+              Dog-friendly?: {dog_friendly}
+            </p>
             <p>Difficuly: {difficulty}</p>
             <p>Length: {length}</p>
             <p>Duration: {duration}</p>
