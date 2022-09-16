@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Row, Col, Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';
@@ -133,20 +133,48 @@ const WalkPost = (props) => {
             {updated_on && <Card.Text className="text-centre">{updated_on}</Card.Text>} 
             {title && <Card.Title className="text-centre"><strong>{title}</strong></Card.Title>}
             {headline && <Card.Text className={styles.Headline}>{headline}</Card.Text>} 
-            <p>
-              <i className="fa-solid fa-tree" />
-              Walk Environment: {environment}</p>
-            <p>
-              <i className="fa-solid fa-restroom" />
-              WC en-route?: {wc}
-            </p>
-            <p>
-              <i className="fa-solid fa-dog" />
-              Dog-friendly?: {dog_friendly}
-            </p>
-            <p>Difficuly: {difficulty}</p>
-            <p>Length: {length}</p>
-            <p>Duration: {duration}</p>
+            <Row className={`${styles.Row} ${styles.Icon}`}>
+              <Col>
+                <p>
+                  <span className={styles.Icon}><i className="fas fa-shoe-prints" /></span>
+                    {environment}
+                </p>
+              </Col>
+              <Col>
+                <p>
+                  <span className={styles.Icon}><i className="fa-solid fa-restroom" /></span>
+                  WC en-route: {wc}
+                </p>
+              </Col>
+              <Col>
+                <p>
+                  <span className={styles.Icon}><i className="fa-solid fa-dog" /></span>
+                  Dog-friendly: {dog_friendly}
+                </p>
+              </Col>
+            </Row>
+            <Row className={styles.Row}>
+              <Col>
+                <p>
+                  <span className={styles.Icon}><i className="fas fa-hiking" /></span>
+                  Difficuly: {difficulty}
+                </p>
+              </Col>
+              <Col>
+                <p>
+                  <span className={styles.Icon}><i className="fas fa-ruler" /></span>      
+                  Length: {length} miles
+                </p>
+              </Col>
+              <Col>
+                <p>
+                  <span className={styles.Icon}><i className="fa-solid fa-clock" /></span>      
+                  Duration: {duration} hours
+                </p>
+              </Col>
+            </Row>
+            <hr />
+            <p className="text-center"><strong>Description</strong></p>
             {content && <Card.Text>{content}</Card.Text>} 
 
             <div className={styles.PostBar}>

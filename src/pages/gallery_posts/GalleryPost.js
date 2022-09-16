@@ -104,8 +104,13 @@ const GalleryPost = (props) => {
             <Card.Img src={image} alt={title} />
         </Link>
         <Card.Body>
-            {category && <Card.Text>{category}</Card.Text>}
-            {title && <Card.Title className="text-centre">{title}</Card.Title>}
+            {category && <Card.Text>
+              <span className={styles.Icon}><i className="fas fa-thumbtack" /></span>
+              {category}
+            </Card.Text>}
+            {title && <Card.Title className="text-centre"><strong>{title}</strong></Card.Title>}
+            <hr />
+            <p className="text-center"><strong>Description</strong></p>
             {content && <Card.Text>{content}</Card.Text>}       
             <div className={styles.PostBar}>
                 {is_owner ? (

@@ -6,23 +6,31 @@
     text-align: center;
   }
   
-  .WalkPost figure,
+.WalkPost figure,
   h5 {
     margin: 0 0;
-  }
+}
   
-  .Bookmark {
+.Bookmark {
     color: #2F4858;
-  }
+}
   
-  .Bookmark:hover {
+.Bookmark:hover {
     color: #2F4858;
-  }
+}
   
-  .BookmarkOutline:hover {
+.BookmarkOutline:hover {
     color: #2F4858;
-  }
+}
 
-  .Headline {
+.Headline {
     font-style: italic;
-  }
+}
+
+.Row {
+    justify-content: space-evenly;
+}
+
+.Icon > i {
+  color:#5EA13C;
+}
