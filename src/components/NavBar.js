@@ -102,6 +102,17 @@ const NavBar = () => {
       </OverlayTrigger>
       {/* Log out */}
     </NavLink>
+    <NavLink
+      className={styles.NavLink}
+      activeclassname={styles.Active}
+      to="/contact/"
+      >
+      <OverlayTrigger placement="bottom"
+        overlay={<Tooltip>Contact Us</Tooltip>}
+      >
+        <i className="fa-solid fa-envelope"></i>
+      </OverlayTrigger>
+    </NavLink>
 
     <NavLink
         className={styles.NavLink}

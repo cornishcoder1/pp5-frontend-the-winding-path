@@ -25,4 +25,5 @@
 
   .Icon > i {
     color:#5EA13C;
+    cursor: default;
   }
