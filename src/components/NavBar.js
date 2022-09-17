@@ -24,29 +24,6 @@ const NavBar = () => {
     }
   };
 
-  // const addWalk = (
-  //   <NavLink
-  //   className={styles.NavLink}
-  //   activeClassName={styles.Active}
-  //   to="/walk-posts/create"
-  //   >
-  //     <i className="fa-solid fa-person-circle-plus"></i>
-  //     {/* Add walk */}
-  //   </NavLink>
-  // )
-
-  // const addGalleryPost = (
-  //   <NavLink
-  //   className={styles.NavLink}
-  //   activeClassName={styles.Active}
-  //   to="/gallery-posts/create"
-  //   >
-  //     <i className="fa-regular fa-square-plus"></i>
-  //     {/* Add gallery post */}
-  //   </NavLink>
-  // )
-
-
   const loggedInIcons = <>
 
     <NavLink
@@ -72,7 +49,6 @@ const NavBar = () => {
       >
       <i className="fa-solid fa-paintbrush"></i>
       </OverlayTrigger>
-      {/* Gallery */}
     </NavLink>
 
     <NavLink
@@ -85,7 +61,6 @@ const NavBar = () => {
       >
       <i className="fa-solid fa-users"></i>
       </OverlayTrigger>
-      {/* Following */}
     </NavLink>
 
     <NavLink
@@ -99,7 +74,6 @@ const NavBar = () => {
       >
       <i className="fa-solid fa-bookmark"></i>
       </OverlayTrigger>
-      {/* Saved Walks */}
     </NavLink>
 
     <NavLink
@@ -112,7 +86,7 @@ const NavBar = () => {
       >
       <i className="fa-solid fa-sign-out-alt"></i>
       </OverlayTrigger>
-      {/* Log out */}
+      {/* Log Out */}
     </NavLink>
     <NavLink
       className={styles.NavLink}
@@ -143,6 +117,7 @@ const NavBar = () => {
     className={styles.NavLink}
     activeClassName={styles.Active}
     to="/login"
+    
     >
       <OverlayTrigger placement="bottom"
       overlay={<Tooltip>Log in</Tooltip>}
@@ -183,8 +158,6 @@ const NavBar = () => {
         aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-left"> 
-            {/* {currentUser && addWalk}
-            {currentUser && addGalleryPost} */}
             <NavLink
             exact
             className={styles.NavLink}
@@ -196,7 +169,6 @@ const NavBar = () => {
               >
               <i className="fa-solid fa-house-chimney"></i>
               </OverlayTrigger>
-              {/* Home      */}
             </NavLink>     
                   
             {currentUser ? loggedInIcons : loggedOutIcons}
