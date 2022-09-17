@@ -106,7 +106,11 @@ const WalkPost = (props) => {
                         </span>
                         ) : currentUser ? (
                         <span onClick={handleSave}>
-                        <i className={`far fa-bookmark ${styles.BookmarkOutline}`} />
+                           <OverlayTrigger placement="top"
+                              overlay={<Tooltip>Save Walk</Tooltip>}
+                            >
+                              <i className={`far fa-bookmark ${styles.BookmarkOutline}`} />
+                           </OverlayTrigger>
                         </span>
                         ) : (
                         <OverlayTrigger
