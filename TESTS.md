@@ -89,7 +89,28 @@ Avatar and username link to profile of logged in user:
 
 <br>
 
-## 
+## As a user I can add walk posts so that I can share my walking experiences with other users.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_add_walk_post.png)
+
+The following link is present on Home, Following and Saved Walks pages:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/add_walkpost_link.png)
+
+The user is taken to the Add Walk Post form:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/add_walkpost_form.png)
+
+On submission, the form data is sent to the DRF API, and the Walk Post displays on the Home page with all form data present: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/walk_post_1.png)
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/walk_post_2.png)
+
+<br>
+
+## As a user I can edit walk posts so that I can update or change the content of my posts.
+
 
 
 
