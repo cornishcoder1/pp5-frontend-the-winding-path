@@ -40,7 +40,7 @@ const GalleryPost = (props) => {
     const handleDelete = async () => {
       try {
         await axiosRes.delete(`/gallery-posts/${id}/`);
-        history.goBack();
+        history.push('/gallery-posts');
       } catch (err) {
         console.log(err);
       }

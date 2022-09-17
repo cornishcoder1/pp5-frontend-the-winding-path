@@ -93,7 +93,6 @@ function GalleryPostCreateForm() {
                 as="select"
                 defaultValue="Choose..."
                 name="category"
-                value={category}
                 onChange={handleChange}
                 aria-label="category"
                 >

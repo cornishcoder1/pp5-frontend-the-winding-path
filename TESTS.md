@@ -101,7 +101,7 @@ The user is taken to the Add Walk Post form:
 
 ![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/add_walkpost_form.png)
 
-On submission, the form data is sent to the DRF API, and the Walk Post displays on the Home page with all form data present: 
+After clicking the 'Create' button, the form data is sent to the DRF API, and the Walk Post displays on the Home page with all form data present (the cancel button returns the user to the Home page): 
 
 ![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/walk_post_1.png)
 
@@ -109,7 +109,107 @@ On submission, the form data is sent to the DRF API, and the Walk Post displays 
 
 <br>
 
-## As a user I can edit walk posts so that I can update or change the content of my posts.
+## As a user I can read a walk post so that I have access to all the information within that post
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_read_walkpost.png)
+
+Users can click into a post from the Home, Following or Saved Walks page feeds and view all post details as well as the comments area: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/read_walkpost.png)
+
+<br>
+
+## As a user I can edit my own walk posts so that I can update or change information.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_edit_walkpost.png)
+
+After clicking into the Walk Post, the user can access the edit button via a dropdown menu:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_walkpost_link.png)
+
+After clicking the edit button, the user is taken to the edit form, where they can change or update all fields:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_walkpost_form.png)
+
+Upon clicking the 'update' button, the user is taken back to the post with the relevant fields now updated (the cancel button returns the user to the post in it's previous state): 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_update_button.png)
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edited_walkpost.png)
+
+<br>
+
+## As a user I can delete walk posts so that I can remove content that I no longer want on the application.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_delete_walkpost.png)
+
+Upon clicking the 'delete' button the post is deleted from the application and the DRF API, and the user is returned to the page they were previously on: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/delete_walkpost_link.png)
+
+<br>
+
+## As a user I can add gallery posts so that I can share my artwork or photography with other users.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_add_gallerypost.png)
+
+The following link is present on the Gallery page:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/add_gallerypost_link.png)
+
+The user is taken to the Add Gallery Post form:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/add_gallerypost_form.png)
+
+After clicking the 'Create' button, the form data is sent to the DRF API, and the Gallery Post displays on the Gallery page with all form data present (the cancel button returns the user to the Gallery page): 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/gallery_post.png)
+
+**Bug Detected! See no.2 in 'Fixed Bugs' section of README**
+
+<br>
+
+## As a user I can read a gallery post so that I have access to all the information within that post
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_read_gallerypost.png)
+
+Users can click into a post from the Gallery page feed and view all post details as well as the comments area: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/read_gallerypost.png)
+
+<br>
+
+## As a user I can edit my own gallery posts so that I can update or change information.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_edit_gallerypost.png)
+
+After clicking into the Gallery Post, the user can access the edit button via a dropdown menu:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_gallerypost_link.png)
+
+After clicking the edit button, the user is taken to the edit form, where they can change or update all fields:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_gallerypost_form.png)
+
+Upon clicking the 'update' button, the user is taken back to the post with the relevant fields now updated (the cancel button returns the user to the post in it's previous state): 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_update_button.png)
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edited_gallerypost.png)
+
+<br>
+
+## As a user I can delete gallery posts so that I can remove content that I no longer want on the application.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_delete_gallerypost.png)
+
+Upon clicking the 'delete' button the post is deleted from the application and the DRF API, and the user is returned to the page they were previously on: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/delete_gallerypost_link.png)
+
+<br>
+
+
 
 
 
