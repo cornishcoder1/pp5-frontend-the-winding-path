@@ -15,18 +15,26 @@ function About() {
             </h2>
             <hr />
             <p>
-                text here
+                Welcome to The Winding Path! 
             </p>
             <p>
-                
+                The Winding Path is a place where lovers of the great outdoors can post information about their favourite walks,
+                and share artwork and photography inspired by the beautiful natural world they encounter. 
             </p>
             <p>
-                text here
+                Create a Walk Post - share handy information on your favourite walks,
+                so that fellow community members know what to expect if they follow in your footsteps.
             </p>
             <p>
-                text here
+                Create a Gallery Post - If photography or artwork is your thing, share your creations with a Gallery Post.
             </p>
-            <p>text here</p>
+            <p>
+                Interact - You can save your favourite walk posts and access them in your Saved Walks feed, as well as post
+                comments on individual posts. Gallery posts can be liked and commented on too. 
+            </p>
+            <p>
+                Create your first post to get started. Happy hiking!
+            </p>
             <br />
             </Container>
       </Col>

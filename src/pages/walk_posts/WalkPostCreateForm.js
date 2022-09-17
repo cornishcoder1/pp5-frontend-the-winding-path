@@ -133,6 +133,7 @@ function WalkPostCreateForm() {
                 aria-label="environment"
                 >
                     <option value="other">Other</option>
+                    <option value="city">City</option>
                     <option value="coastal">Coastal</option>
                     <option value="countryside">Countryside</option>
                     <option value="hill">Hill</option>
