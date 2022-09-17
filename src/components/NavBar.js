@@ -50,6 +50,18 @@ const NavBar = () => {
   const loggedInIcons = <>
 
     <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/about"
+    >
+      <OverlayTrigger placement="bottom"
+      overlay={<Tooltip>About</Tooltip>}
+      >
+      <i className="fas fa-book-open"></i>
+      </OverlayTrigger>
+    </NavLink>
+
+    <NavLink
     className={styles.NavLink}
     activeClassName={styles.Active}
     to="/gallery-posts"
