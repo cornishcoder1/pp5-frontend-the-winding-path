@@ -209,6 +209,120 @@ Upon clicking the 'delete' button the post is deleted from the application and t
 
 <br>
 
+## As a user I can like other users gallery posts so that I can show my appreciation for other users content.
+
+## As a user I can see how many likes a gallery post has had so that I can gauge it’s popularity.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_like_gallerypost.png)
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/like__count_gallerypost.png)
+
+Users can click the 'like' heart button on any gallery post (in the posts feed or specific post) to like or unlike a post. The visible like count will increase or decrease on each post when a user likes/unlikes:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/like_gallerypost.png)
+
+<br>
+
+## As a user I can comment on walk and gallery posts so that I can communicate my thoughts and opinions with other users.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_create_comments.png)
+
+## As a user I can read comments on walk and gallery posts so that I can see the thoughts and opinions of other users.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_read_comments.png)
+
+Any post (gallery or walk) can be clicked into, and a comment form can be accessed beneath the main post body:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/create_comment.png)
+
+After the 'post' button is clicked, the comment shows in a list beneath the main post body: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/comment_list.png)
+
+<br>
+
+## As a user I can edit my own comments so that I can update or change the content of my existing comments.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_edit_comment.png)
+
+A dropdown menu is present on a logged in user's own comments with an edit button: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_comment_link.png)
+
+When the edit button is clicked, an edit form opens on the comment: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_comment_form.png)
+
+When the 'save' button is clicked, the updated comment displays in the comment list: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edited_comment.png)
+
+<br>
+
+## As a user I can delete my own comments so that I can remove comments that I no longer want on the application.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_delete_comment.png)
+
+A dropdown menu is present on a logged in user's own comments with a delete button: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/delete_comment_link.png)
+
+When the delete button is clicked, the comment disappears from the list. 
+
+<br>
+
+## As a user I can access a list of ‘Who to Follow’ profiles so that I can see and interact with other users of the site and their content.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_who_to_follow.png)
+
+The 'Who to follow' list displays on the home, following and saved walks pages. Users can follow/unfollow a profile by clicking it's corresponding button:  
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/who_to_follow_list.png)
+
+A follow/unfollow button is also available in the Profile page: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/profile_follow_button.png)
+
+<br>
+
+## As a user I can access a ‘Following’ feed , so that I can view content filtered by what profiles I follow.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_following_feed.png)
+
+Link to Following feed/page is present in the navbar (when clicked the user is taken to a feed of walk posts filtered by user profiles that they are following):
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/following_feed_link.png)
+
+<br>
+
+## As a user I can save walk posts that are of particular interest, so that I can find them again later in my ‘Saved Walks’ feed.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_save_walkpost.png)
+
+A (bookmark) save button is present at the top of every walk post. When clicked, the bookmark turns green and the post is added to the user's Saved Walks feed:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/save_walk_link.png)
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/saved_walk.png)
+
+The Saved Walks feed is accessible for the navigation bar: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/saved_walk_feed.png)
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
