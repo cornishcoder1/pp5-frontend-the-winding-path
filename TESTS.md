@@ -311,6 +311,95 @@ The Saved Walks feed is accessible for the navigation bar:
 
 <br>
 
+## As a user I can access other users profiles so that I can view walk posts by a specific user.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_access_profiles.png)
+
+## As a user I can view stats on user profiles so that I can learn more about a specific user.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_user_stats.png)
+
+Profiles can be clicked into via profile name/avatar on the 'Who to Follow' list: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/who_to_follow_list.png)
+
+Upon being clicked into, the Profile page shows the user's location, bio and stats and a list of their walk posts:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/profile_page.png)
+
+<br>
+
+## As a user I can access my own profile so that I can edit my details.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_edit_profile.png)
+
+A dropdown menu is present in a user's own profile with an edit button: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_profile_link.png)
+
+After clicking the edit button, the user is taken to the edit form, where they can change or update all fields:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edit_profile_form.png)
+
+When the 'save' button is clicked, the user is returned to their updated profile:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edited_profile.png)
+
+<br>
+
+## As a user I can change my username so that I can ensure security if required.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_change_username.png)
+
+A dropdown menu is present in a user's own profile with a 'change username' button:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/change_username_link.png)
+
+After clicking the 'change username' button, the user is taken to a form where they can change their username:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/change_username_form.png)
+
+An error message appears if invalid characters are used: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/change_username_error.png)
+
+Upon entering a valid username, and clicking the 'save' button, the user is returned to their updated profile (the cancel button takes the user back to their profile in it's original state):
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/edited_username.png)
+
+<br>
+
+## As a user I can change my password so that I can ensure security if required.
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_change_password.png)
+
+A dropdown menu is present in a user's own profile with a 'change password' button:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/change_password_link.png)
+
+After clicking the 'change password' button, the user is taken to a form where they can change their password:
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/change_password_form.png)
+
+An error message appears if invalid characters are used: 
+
+![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/change_password_error.png)
+
+Upon entering a valid password, and clicking the 'save' button, the user is returned to their profile (clicking the cancel button retains the original password).
+
+<br>
+
+##
+
+
+
+
+
+
+
+
+
+
 
 
 
