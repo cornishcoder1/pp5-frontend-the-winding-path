@@ -41,6 +41,8 @@ Link to sign up form present in navbar:
 
 ![User Story testing](src/assets/testing_screenshots/signup_link.png)
 
+![User Story testing](src/assets/testing_screenshots/sign_up_form.png)
+
 Upon submitting Sign Up form, user is re-directed to Log In page:
 
 ![User Story testing](src/assets/testing_screenshots/login.png)
