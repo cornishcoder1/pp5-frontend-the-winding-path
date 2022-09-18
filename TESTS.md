@@ -17,7 +17,7 @@
 
 ## As a user I can view the navigation bar on every page so that I can navigate easily around the application.
 
-![User Story testing](../pp5-react-frontend-the-winding-path/src/assets/testing_screenshots/ac_navbar.png)
+![User Story testing](src/assets/testing_screenshots/ac_navbar.png)
 
 Logged out navigation bar: 
 
