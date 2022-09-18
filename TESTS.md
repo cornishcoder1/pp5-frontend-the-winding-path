@@ -389,7 +389,78 @@ Upon entering a valid password, and clicking the 'save' button, the user is retu
 
 <br>
 
-##
+## As a user I can view all posts and comments in date order (descending) so that I can quickly see the most recent content.
+
+![User Story testing](src/assets/testing_screenshots/ac_date_ordered.png)
+
+All posts are listed in date order of when they were last updated (most recent first).
+
+All comments are listed in order of when they were last updated (days, hours and minutes): 
+
+![User Story testing](src/assets/testing_screenshots/comments_date_ordered.png)
+
+<br>
+
+## As a user I can search for walk posts by owner, title, environment or difficulty so that I can find the content I am most interested in.
+
+![User Story testing](src/assets/testing_screenshots/ac_search_walkposts.png)
+
+Search bar is present on Home, Following and Saved Walks pages. Searching by owner, title, environment or difficulty has been tested and posts are filtered correctly. 
+
+## As a user I can search for gallery posts by owner or title so that I can find the content I am most interested in.
+
+![User Story testing](src/assets/testing_screenshots/ac_search_galleryposts.png)
+
+Search bar is present on Gallery page. Searching by owner or title has been tested and posts are filtered correctly. 
+
+<br>
+
+## As a user I can fill out and submit a contact form so that I can make admin aware of any issues or feedback. 
+
+![User Story testing](src/assets/testing_screenshots/ac_contact_form.png)
+
+Link to contact form is present in navbar: 
+
+![User Story testing](src/assets/testing_screenshots/contact_us_link.png)
+
+Upon clicking the link the user is taken to a contact form: 
+
+![User Story testing](src/assets/testing_screenshots/contact_form.png)
+
+Error messages will show if the form is not completed correctly:
+
+![User Story testing](src/assets/testing_screenshots/contact_form_error.png)
+
+Upon clicking the 'submit' button, the user is taken to a confirmation page: 
+
+![User Story testing](src/assets/testing_screenshots/confirmation.png)
+
+The form data is then submitted to the DRF, and is accessible in the admin panel: 
+
+![User Story testing](src/assets/testing_screenshots/contact_drf.png)
+
+![User Story testing](src/assets/testing_screenshots/contact_admin.png)
+
+<br>
+
+## As a user I can access an 'about' page so that I can find out more about the application.
+
+![User Story testing](src/assets/testing_screenshots/ac_about.png)
+
+The about page is accessible via a navigation bar link: 
+
+![User Story testing](src/assets/testing_screenshots/about_page.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
