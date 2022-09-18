@@ -3,7 +3,7 @@
     padding-top: 100px;
   }
   
-  .Header {
+.Header {
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -15,32 +15,32 @@
     color: #A66A24;
   }
   
-  .Link {
+.Link {
     text-decoration: none;
     text-align: center;
     display: block;
     margin: auto;
   }
 
-  .LinkSignin {
+.LinkSignin {
     text-decoration: none;
     text-align: center;
     display: block;
     margin: auto;
   }
 
-  .LinkSignin:hover{
+.LinkSignin:hover{
     color:#2F4858
   } 
   
-  .LinkSignin span {
+.LinkSignin span {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: bold;
     color: #A66A24;
   }
   
-  .Container {
+.Container {
     height: 900px;
     margin: auto;
     padding: 80px 15px 0 15px;
@@ -49,10 +49,10 @@
 
 
   
-  /* .SignInCol {
+.SignInCol {
     height: 320px;
    }
   
-  .SignUpCol {
+.SignUpCol {
     height: 375px;
-  } */
+  }

@@ -3,7 +3,7 @@
     border-bottom: 2px #095B6D solid;
   }
 
-  .Button {
+.Button {
     font-size: 1em;
     align-self: center;
     border-radius: 100px;
@@ -15,21 +15,21 @@
     color: white;
   }
   
-  .Button:hover {
+.Button:hover {
     opacity: 0.8;
     border-color: transparent;
     cursor: pointer;
     background-color: #2F4858;
   }
     
-  .Button:hover:active {
+.Button:hover:active {
     background-color: #2F4858 !important;
   }
     
-  .Button:active {
+.Button:active {
     background-color: #2F4858!important;
   }
     
-  .Button:focus {
+.Button:focus {
     background-color: #2F4858;
   }

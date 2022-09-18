@@ -6,24 +6,24 @@
     text-align: center;
   }
   
-  .GalleryPost figure,
-  h5 {
+.GalleryPost figure,
+h5 {
     margin: 0 0;
   }
   
-  .Heart {
+.Heart {
     color: #f85032;
   }
   
-  .Heart:hover {
+.Heart:hover {
     color: #2F4858;
   }
   
-  .HeartOutline:hover {
+.HeartOutline:hover {
     color: #f85032;
   }
 
-  .Icon > i {
+.Icon > i {
     color:#5EA13C;
     cursor: default;
   }

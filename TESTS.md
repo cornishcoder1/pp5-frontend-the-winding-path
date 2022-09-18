@@ -544,6 +544,10 @@ The following errors were detected by ES Lint:
 
 ## W3C CSS
 
+All CSS code passed through the validator with no issues: 
+
+![Validator testing](src/assets/testing_screenshots/css_validation.png)
+
 ## Lighthouse
 
 ***

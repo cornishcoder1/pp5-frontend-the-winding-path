@@ -1,15 +1,7 @@
-/* .buttonBar {
-  border-radius: 2px;
-  margin-bottom: 16px;
-  
-  width: 50%; */
-  /* text-align: center; */
-/* } */
 .Row {
   display: flex;
   justify-content: center;
 }
-
 
 .SearchBar input {
     border-radius: 20px;
@@ -18,14 +10,14 @@
     margin-bottom: 16px;
   }
   
-  .SearchIcon {
+.SearchIcon {
     position: absolute;
     font-size: 1.2rem;
     padding: 9px;
     padding-left: 15px;
   }
   
-  .SearchIcon:hover {
+.SearchIcon:hover {
     cursor: default;
     color: #cfced3;
   }

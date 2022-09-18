@@ -2,7 +2,7 @@
     min-height: 343px;
   }
 
-  .Row {
+.Row {
     display: flex;
     justify-content: center;
   }
