@@ -1,19 +1,21 @@
 ## Table of contents
 
 1. [User Story testing](#user-story-testing)
+    1. [User Story tests](#user-story-tests)
+    2. [Testing Summary](#testing-summary)
 
-2. [URL Testing](#url-testing)
-
-3. [Validator Testing](#validator-testing)
+2. [Validator Testing](#validator-testing)
     1. [ES Lint](#es-lint)
     2. [W3C CSS](#w3c-css)
     3. [Lighthouse](#lighthouse)
 
-4. [Responsive Testing](#responsive-testing)
+3. [Responsive Testing](#responsive-testing)
 
 ***
 
 # User Story testing
+
+# User Story Tests
 
 ## As a user I can view the navigation bar on every page so that I can navigate easily around the application.
 
@@ -452,6 +454,34 @@ The form data is then submitted to the DRF, and is accessible in the admin panel
 The about page is accessible via a navigation bar link: 
 
 ![User Story testing](src/assets/testing_screenshots/about_page.png)
+
+# Testing summary 
+
+1. All authentication functionality has been tested and behaves as expected. 
+
+2. The navigation bar contains all required icons and overlay/tooltips which link to the correct pages. 
+
+3. The hamburger menu for screen sizes medium and below contains all required icons and overlay/tooltips which link to the correct pages. 
+
+4. CRUD functionality behaves as expected for Walk posts, Gallery posts and comments. 
+
+5. Like functionality for Gallery posts works as expected. 
+
+6. The 'Who to Follow' list displays on the correct pages, and the follow/unfollow functionality behaves as expected. 
+
+7. The following feed filters the returned walk post data correctly. 
+
+8. Save functionality for Walk posts works as expected, and the saved walk posts feed filters the returned walk post data correctly. 
+
+9. The profile page displays all profile data as expected. 
+
+10. CRUD functionality behaves as expected for updating Profiles, Username and Password. 
+
+11. All posts and comments display in ascending order of when they were last updated. 
+
+12. All search bars return the correctly filtered post data. 
+
+13. The contact form sends data to the DRF API as expected.
 
 
 
