@@ -1,4 +1,4 @@
-/* eslint-disable */
+/*eslint-disable*/
 import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
@@ -30,7 +30,6 @@ function GalleryPostsPage({ message, filter = "" }) {
     const [query, setQuery] = useState("");
 
     const currentUser = useCurrentUser();
-    const setCurrentUser = useSetCurrentUser();
 
     const addGalleryPost = (
       <NavLink

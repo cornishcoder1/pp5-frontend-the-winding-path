@@ -532,7 +532,15 @@ The about page is accessible via a navigation bar link:
 
 The following errors were detected by ES Lint: 
 
-1. "'Children' is missing in props validation" 
+1. "{prop}is missing in props validation" - ES Lint identified this error across a number of js files. The following solution suggested by sean_ci on Slack was used to stop these errors from appearing: 
+
+![Validator testing](src/assets/testing_screenshots/prop_types_rule.png)
+
+2. "Component definition is missing display name" - This error related to the 'ThreeDots' component in MoreDropDown.js. The following solution given by <a href="https://stackoverflow.com/users/3617886/tholle" title="Tholle">Tholle</a> on <a href="https://stackoverflow.com/questions/52992932/component-definition-is-missing-display-name-react-display-name" title="Stackoverflow">Stackoverflow</a> was used to rectify this error: 
+
+![Validator testing](src/assets/testing_screenshots/stackoverflow_solution.png)
+
+3. "Do not pass children as props" - This error has been intentionally ignored as it is in relation to code that was provided in the Moments Walkthrough project. I have added ```/*eslint-disable*/``` to the top of the js files concerned and have also listed them in the .eslintignore file.  
 
 ## W3C CSS
 

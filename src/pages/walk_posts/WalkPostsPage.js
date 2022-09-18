@@ -18,7 +18,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import WhoToFollow from "../profiles/WhoToFollow";
-import { useCurrentUser, useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 
 function WalkPostsPage({ message, filter = "" }) {
@@ -30,7 +30,6 @@ function WalkPostsPage({ message, filter = "" }) {
     const [query, setQuery] = useState("");
 
     const currentUser = useCurrentUser();
-    const setCurrentUser = useSetCurrentUser();
 
     const addWalk = (
       <NavLink

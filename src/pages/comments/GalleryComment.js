@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -42,7 +41,7 @@ const GalleryComment = (props) => {
         ...prevGalleryComments,
         results: prevGalleryComments.results.filter((galleryComment) => galleryComment.id !== id),
       }));
-    } catch (err) {}
+    } catch (err) {""}
   };
 
   return (

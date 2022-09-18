@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { axiosReq } from "../api/axiosDefaults";
 
 export const fetchMoreData = async (resource, setResource) => {
@@ -13,7 +12,7 @@ export const fetchMoreData = async (resource, setResource) => {
           : [...acc, cur];
       }, prevResource.results),
     }));
-  } catch (err) {}
+  } catch (err) {""}
 };
 
 export const followHelper = (profile, clickedProfile, following_id) => {

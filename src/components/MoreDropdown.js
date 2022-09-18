@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
@@ -73,4 +72,8 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
       </Dropdown>
     );
   }
+
+ThreeDots.displayName = 'ThreeDots';
+
+export default ThreeDots;
   

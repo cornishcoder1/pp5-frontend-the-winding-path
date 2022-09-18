@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -42,7 +41,7 @@ const WalkComment = (props) => {
         ...prevWalkComments,
         results: prevWalkComments.results.filter((walkComment) => walkComment.id !== id)
       }));
-    } catch (err) {}
+    } catch (err) {""}
   };
 
   return (

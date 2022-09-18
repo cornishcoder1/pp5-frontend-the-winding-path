@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Row, Col, Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
@@ -16,7 +15,6 @@ const WalkPost = (props) => {
         profile_id,
         profile_image,
         walk_comments_count,
-        posts_saved_count,
         save_id,
         title,
         headline,

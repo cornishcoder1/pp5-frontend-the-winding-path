@@ -1,4 +1,4 @@
-/* eslint-disable */
+/*eslint-disable*/
 import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
@@ -11,7 +11,6 @@ import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import WhoToFollow from "./WhoToFollow";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -130,7 +129,7 @@ function ProfilePage() {
   const userWalkPostsHeader = (
     <>
       <hr />
-        <p className="text-center">{profile?.owner}'s walk posts</p>
+        <p className="text-center">Walk Posts from {profile?.owner}</p>
         <hr />
     </>
   )
