@@ -15,8 +15,8 @@
     },
     "plugins": [
         "react"
-    ]
-    // "rules": {
-    //     "indent": [2, "tab"]
-    // }
+    ],
+    "rules": {
+        "react/prop-types": 0
+    }
 }

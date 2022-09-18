@@ -1,5 +1,5 @@
-/* eslint-disable */
-import { createContext, useContext, useEffect, useState } from "react";
+/*eslint-disable*/
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { followHelper, unfollowHelper } from "../utils/utils";
@@ -11,6 +11,7 @@ export const useProfileData = () => useContext(ProfileDataContext);
 export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
+
   const [profileData, setProfileData] = useState({
     // we will use the pageProfile later!
     pageProfile: { results: [] },
