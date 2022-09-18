@@ -483,47 +483,6 @@ The about page is accessible via a navigation bar link:
 
 - The contact form sends data to the DRF API as expected.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-***
-
-# URL testing
-
 ***
 
 # Validator testing
@@ -548,12 +507,40 @@ All CSS code passed through the validator with no issues:
 
 ![Validator testing](src/assets/testing_screenshots/css_validation.png)
 
-## Lighthouse
+## Lighthouse (DO AGAIN POST DEPLOYMENT)
+
+The site scored highly on accessibility: 
+
+![Validator testing](src/assets/testing_screenshots/lighthouse.png)
 
 ***
 
-# Responsive Testing
+# Responsive Testing (DO THIS POST DEPLOYMENT)
 
+The website has been tested using the following browsers:
+
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Safari
+
+The website has been tested on the following devices: 
+
+- MacBook Air
+- Dell Latitude 5300
+- iPhone SE 2020
+
+The following emulated devices have been tested in Dev Tools:
+
+- iPhone XR
+- iPhone 12 Pro
+- Pixel 5
+- Samsung Galaxy S20 Ultra
+- iPad Air
+- iPad Mini
+- Galaxy A51/71 
+
+All functionality worked as expected for every device and web browser. The only issue encountered was that the 'Add Review' button disappeared on small screens when viewed horizontally. This was fixed by adding a top margin to the container below the header (see fixed bugs section of README for more information). 
 
 
 
