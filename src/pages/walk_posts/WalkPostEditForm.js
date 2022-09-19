@@ -55,7 +55,7 @@ function WalkPostEditForm() {
     
             is_owner ? setWalkPostData({ title, headline, environment, wc, dog_friendly, difficulty, length, duration, content, image, }) : history.push("/");
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         };
     
@@ -101,7 +101,7 @@ function WalkPostEditForm() {
         await axiosReq.put(`/walk-posts/${id}/`, formData);
         history.push(`/walk-posts/${id}`);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         if (err.response?.status !== 401) {
           setErrors(err.response?.data);
         }

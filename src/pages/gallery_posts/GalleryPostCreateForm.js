@@ -60,7 +60,7 @@ function GalleryPostCreateForm() {
       const { data } = await axiosReq.post("/gallery-posts/", formData);
       history.push(`/gallery-posts/${data.id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

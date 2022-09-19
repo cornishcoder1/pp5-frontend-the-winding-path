@@ -57,7 +57,7 @@ function WalkPostsPage({ message, filter = "" }) {
             setWalkPosts(data);
             setHasLoaded(true);
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         };
     

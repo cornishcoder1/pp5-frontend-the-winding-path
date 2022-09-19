@@ -33,9 +33,8 @@ function GalleryPostPage() {
             ]);
             setGalleryPost({ results: [galleryPost] });
             setGalleryComments(galleryComments);
-            console.log(galleryPost);
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         };  
         handleMount();

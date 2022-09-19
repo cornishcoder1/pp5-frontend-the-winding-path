@@ -36,7 +36,7 @@ function GalleryPostCreateForm() {
 
         is_owner ? setGalleryPostData({ title, category, content, image }) : history.push("/");
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -76,7 +76,7 @@ function GalleryPostCreateForm() {
         await axiosReq.put(`/gallery-posts/${id}/`, formData);
         history.push(`/gallery-posts/${id}`);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         if (err.response?.status !== 401) {
           setErrors(err.response?.data);
         }

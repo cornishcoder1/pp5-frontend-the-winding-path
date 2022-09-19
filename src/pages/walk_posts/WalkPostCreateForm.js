@@ -81,7 +81,7 @@ function WalkPostCreateForm() {
       const { data } = await axiosReq.post("/walk-posts/", formData);
       history.push(`/walk-posts/${data.id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

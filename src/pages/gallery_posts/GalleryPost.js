@@ -44,7 +44,7 @@ const GalleryPost = (props) => {
         await axiosRes.delete(`/gallery-posts/${id}/`);
         history.push('/gallery-posts');
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -61,7 +61,7 @@ const GalleryPost = (props) => {
             }),
           }));
         } catch (err) {
-          console.log(err);
+          // console.log(err);
         }
       };
 
@@ -77,7 +77,7 @@ const GalleryPost = (props) => {
             }),
           }));
         } catch (err) {
-          console.log(err);
+          // console.log(err);
         }
       };
 

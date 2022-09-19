@@ -32,9 +32,8 @@ function WalkPostPage() {
             ]);
             setWalkPost({ results: [walkPost] });
             setWalkComments(walkComments);
-            console.log(walkPost);
           } catch (err) {
-            console.log(err);
+            // console.log(err);
           }
         };
     

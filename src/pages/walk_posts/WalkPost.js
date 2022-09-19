@@ -50,7 +50,7 @@ const WalkPost = (props) => {
         await axiosRes.delete(`/walk-posts/${id}/`);
         history.goBack();
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -66,7 +66,7 @@ const WalkPost = (props) => {
             }),
           }));
         } catch (err) {
-          console.log(err);
+          // console.log(err);
         }
       };
 
@@ -82,7 +82,7 @@ const WalkPost = (props) => {
             }),
           }));
         } catch (err) {
-          console.log(err);
+          // console.log(err);
         }
       };
 
