@@ -4,6 +4,18 @@
 
 # Introduction
 
+The Winding Path is a place where lovers of the great outdoors can post information about their favourite walks, and share artwork and photography inspired by the beautiful natural world they encounter.
+
+Users can save their favourite walk posts and access them in a Saved Walks feed, as well as post comments on individual posts. Gallery posts can be liked and commented on too.
+
+The Winding Path has been built using the Django Rest Framework (Python), React.js, Bootstrap.js, HTML, CSS & JavaScript. It provides user authentication and full CRUD functionality.
+
+<a href="https://the-winding-path-drf-api.herokuapp.com/" target="_blank" rel="noopener" aria-label="Link to deployed DRF API">Click here</a> for the deployed DRF API
+
+<a href="https://the-winding-path.herokuapp.com/" target="_blank" rel="noopener" aria-label="Link to deployed application">Click here </a> for the deployed Front End application 
+
+![Am I Responsive](src/assets/testing_screenshots/am_i_responsive.png)
+
 ***
 
 # UX
