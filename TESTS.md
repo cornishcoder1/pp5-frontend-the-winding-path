@@ -484,6 +484,8 @@ The about page is accessible via a navigation bar link:
 
 - The contact form sends data to the DRF API as expected.
 
+- All URLS have been tested. If a logged out user attempts to access a url only available to a logged in user, they are directed away from the restricted page. Likewise, logged in users cannot access edit forms for other user's data. 
+
 ***
 
 # Validator testing
