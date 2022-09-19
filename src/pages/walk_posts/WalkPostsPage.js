@@ -38,17 +38,6 @@ function WalkPostsPage({ message, filter = "" }) {
         Add walk
       </NavLink>
     )
-  
-    // const addGalleryPost = (
-    //   <NavLink
-    //   className={styles.NavLink}
-    //   activeClassName={styles.Active}
-    //   to="/gallery-posts/create"
-    //   >
-    //     <i className="fa-regular fa-square-plus"></i>
-    //     {/* Add gallery post */}
-    //   </NavLink>
-    // )
 
     useEffect(() => {
         const fetchWalkPosts = async () => {
@@ -69,7 +58,7 @@ function WalkPostsPage({ message, filter = "" }) {
         return () => {
           clearTimeout(timer);
         };
-      }, [filter, query, pathname]);
+      }, [filter, query, pathname, currentUser]);
   
       return (
         <Row className="h-100">
@@ -78,7 +67,6 @@ function WalkPostsPage({ message, filter = "" }) {
             <Container className='pb-4'>
              
             {currentUser && addWalk}
-            {/* {currentUser && addGalleryPost} */}
             </Container>
             
             <WhoToFollow mobile />

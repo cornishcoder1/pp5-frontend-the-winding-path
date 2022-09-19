@@ -29,8 +29,6 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
   const history = useHistory();
 
-  // const [show, setShow] = useState(false);
-
   const handleChange = (event) => {
     setContactData({
       ...contactData,

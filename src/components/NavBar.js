@@ -91,7 +91,7 @@ const NavBar = () => {
       >
       <i className="fa-solid fa-sign-out-alt"></i>
       </OverlayTrigger>
-      {/* Log Out */}
+      {/* Log Out - see NavBar.test.js for explaination for why this has been left here */}
     </NavLink>
     <NavLink
       className={styles.NavLink}
@@ -129,7 +129,7 @@ const NavBar = () => {
       >
       <i className="fa-solid fa-right-to-bracket"></i>
       </OverlayTrigger>
-      {/* Log in */}
+      {/* Log in - see NavBar.test.js for explaination for why this has been left here */}
     </NavLink>
     <NavLink
     className={styles.NavLink}
@@ -141,7 +141,7 @@ const NavBar = () => {
       >
       <i className="fa-solid fa-pen-to-square"></i>
       </OverlayTrigger>
-      {/* Sign up */}
+      {/* Sign up - see NavBar.test.js for explaination for why this has been left here */}
     </NavLink>
   </>
   );
