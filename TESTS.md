@@ -309,7 +309,7 @@ A (bookmark) save button is present at the top of every walk post. When clicked,
 
 ![User Story testing](src/assets/testing_screenshots/saved_walk.png)
 
-The Saved Walks feed is accessible for the navigation bar: 
+The Saved Walks feed is accessible from the navigation bar: 
 
 ![User Story testing](src/assets/testing_screenshots/saved_walk_feed.png)
 
@@ -457,6 +457,8 @@ The about page is accessible via a navigation bar link:
 ![User Story testing](src/assets/testing_screenshots/about_page.png)
 
 # Testing summary 
+
+- All tests have been carried out in development and deployed version of application. 
 
 - All authentication functionality has been tested and behaves as expected. 
 
