@@ -1,5 +1,41 @@
 # Table of Contents
 
+1. [Introduction](#introduction)
+
+2. [UX](#ux)
+    1. [The Strategy Plane](#the-strategy-plane)
+    2. [Agile Methodology](#agile-methodology)
+    3. [The Scope Plane](#the-scope-plane)
+    4. [The Structure Plane](#the-structure-plane)
+    5. [The Skeleton Plane](#the-skeleton-plane)
+    6. [The Surface Plane](#the-surface-plane)
+
+3. [Features](#features)
+    1. [Components](#components)
+    2. [Pages](#pages)
+    3. [Features left to implement](#features-left-to-implement-possible-future-sprints)
+
+4. [Testing](#testing)
+
+5. [Bugs](#bugs)
+    1. [Fixed](#fixed)
+    2. [Unfixed](#unfixed)
+
+6. [Technologies Used](#technologies-used)
+    1. [Modules](#modules)
+    2. [Languages](#languages)
+    3. [Frameworks, Libraries and Platforms Used](#frameworks-libraries-and-platforms-used-front-end)
+    4. [Services](#services)
+    5. [Resources](#resources)
+
+7. [Project Setup and Initial Deployment](#project-setup-and-initial-deployment)
+
+8. [Final Deployment](#final-deployment)
+
+9. [Credits](#credits)
+    1. [Media](#media)
+    2. [Acknowledgements](#acknowledgements)
+
 ***
 
 # Introduction
@@ -367,7 +403,7 @@ Related user stories:
 
 2. When creating a gallery post I found that if the category field was left at it's default value 'Artwork' and the create form was then submitted, the value for 'Category' in the gallery post would show as '0':
 
-![Fixed](../pp5-react-frontend-the-winding-path/src/assets/bug_screenshots/gallerypost_bug.png)
+![Fixed](src/assets/bug_screenshots/gallerypost_bug.png)
 
 This bug was fixed by changing the 'default' value for the category field from '0' to 'artwork' in the DRF API Gallery model. Once this was changed, the default value of 'artwork' would show in the post if not changed by the user. 
 
@@ -486,7 +522,7 @@ Modules used in this project can be found in the README for the DRF API <a href=
 
 ***
 
-# Credits
+## Acknowledgements
 
 - Charlie_Alumni, Bim_Alumni and Lauren_Nicole for helping me install ESLint correctly. 
 - Lauren_Nicole for the chats and support. Also for supplying her own React Front End PP5 for reference. 
