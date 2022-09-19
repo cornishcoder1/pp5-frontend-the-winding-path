@@ -79,7 +79,72 @@ The font used throughout the website is 'Zilla Slab' from <a href="https://fonts
 ***
 
 # Features
-(related user story for each page or component). Re-use of components (2.1 - Document the reuse of components)
+
+## Components
+
+Asset/Spinner:
+
+![Features](src/assets/readme_screenshots/component_asset_spinner.png)
+
+This component is re-used in several parts of the application, wherever data is loading. It also appears for several seconds whilst data is fetched for a 'search posts' request. In this case, UX is improved as the feed does not refresh every time a character is typed into the search bar. 
+
+Related user stories: 
+
+***As a user I can search for gallery posts by owner or title so that I can find the content I am most interested in.***
+
+***As a user I can search for walk posts by owner, title, environment or difficulty so that I can find the content I am most interested in.***
+
+<br>
+
+Avatar: 
+
+![Features](src/assets/readme_screenshots/component_avatar.png)
+
+This component is used in the navbar, post pages, 'Who to Follow' list and profile page. This component contributes to improved UX by allowing users to add a profile photo of their choice. It also allows other users to more quickly identify users they want to engage with.  
+
+Related user stories:
+
+***As a user I can access other users profiles so that I can view walk posts by a specific user.***
+
+***As a user I can view stats on user profiles so that I can learn more about a specific user.***
+
+***As a user I can access a list of ‘Who to Follow’ profiles so that I can see and interact with other users of the site and their content.***
+
+<br>
+
+MoreDropDown: 
+
+![Features](src/assets/readme_screenshots/component_moredropdown.png)
+
+This component is used in the post page, comments and profile. It improves UX by allowing users to access a dropdown menu to update/edit or delete their own data.
+
+Related user stories:
+
+***As a user I can edit my own walk posts so that I can update or change information.***
+
+***As a user I can delete walk posts so that I can remove content that I no longer want on the application.***
+
+***As a user I can edit my own gallery posts so that I can update or change information.***
+
+***As a user I can delete gallery posts so that I can remove content that I no longer want on the application.***
+
+***As a user I can edit my own comments so that I can update or change the content of my existing comments.***
+
+***As a user I can delete my own comments so that I can remove comments that I no longer want on the application.***
+
+***As a user I can access my own profile so that I can edit my details.***
+
+***As a user I can change my username so that I can ensure security if required.***
+
+***As a user I can change my password so that I can ensure security if required.***
+
+
+
+
+
+<br>
+
+## Pages
 
 ## Features left to implement
 
