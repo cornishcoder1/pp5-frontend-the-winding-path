@@ -24,7 +24,7 @@
 6. [Technologies Used](#technologies-used)
     1. [Modules](#modules)
     2. [Languages](#languages)
-    3. [Frameworks, Libraries and Platforms Used](#frameworks-libraries-and-platforms-used-front-end)
+    3. [Frameworks, Libraries and Platforms](#frameworks-libraries-and-platforms-front-end)
     4. [Services](#services)
     5. [Resources](#resources)
 
@@ -40,7 +40,7 @@
 
 # Introduction
 
-The Winding Path is a place where lovers of the great outdoors can post information about their favourite walks, and share artwork and photography inspired by the beautiful natural world they encounter.
+The Winding Path is a place where lovers of the great outdoors can post information about their favourite walks and share artwork and photography inspired by the beautiful natural world they encounter.
 
 Users can save their favourite walk posts and access them in a Saved Walks feed, as well as post comments on individual posts. Gallery posts can be liked and commented on too.
 
@@ -64,6 +64,8 @@ The Winding Path has been built using the Django Rest Framework (Python), React.
 
 This application has been produced for Portfolio Project 5, as part of the Code Institute Diploma in Full-Stack Software Development. The project aims to demonstrate skills learnt in HTML, CSS, JavaScript, React.js, Bootstrap.js and Django REST Framework.
 
+**Project goals mapped to user stories**
+
 ![The Strategy Plane](src/assets/readme_screenshots/project_goals_user_stories.png)
 
 ## Agile Methodology
@@ -85,7 +87,7 @@ Features planned:
 - Search Walk posts - Search by owner, title, environment or difficulty. 
 - Search Gallery posts - Search by owner or title. 
 - Comments - All posts can be commented upon. 
-- Likes - Gallery posts can be likes.
+- Likes - Gallery posts can be liked.
 - Save - Walk posts can be saved. 
 - Users can sign up, log in and log out.
 - Form errors will be communicated to user.
@@ -102,7 +104,7 @@ Database Schema can be found in the README for the DRF API <a href="https://gith
 
 All wireframes for the project can be found [here](src/assets/wireframes/)
 
-These wireframe were drafted at the very early planning stages of the project and may not feature all pages and their features. 
+These wireframes were drafted at the very early planning stages of the project and may not show an exhaustive list of pages and features. 
 
 ## The Surface Plane
 
@@ -110,7 +112,7 @@ These wireframe were drafted at the very early planning stages of the project an
 
 ![The Surface Plane](src/assets/readme_screenshots/color_scheme.png)
 
-I wanted the main colours of the site to be calming and neutral, with a natural feel hence the use of the green and brown tones. Buttons were styled in bolder colors, but in keeping with the color scheme.
+I wanted the main colours of the site to be calming and neutral with a natural feel, hence the use of the green and brown tones. Buttons were styled in bolder colors, but still in keeping with the color scheme.
 
 **Typography**
 
@@ -201,10 +203,6 @@ NotFound:
 ![Features](src/assets/readme_screenshots/component_not_found.png)
 
 This component appears whenever a user tries to access an invalid url. It contributes to improved UX as the user is informed clearly and quickly that the page they are looking for does not exist. 
-
-Related user stories:
-
-***As a user I can view the navigation bar on every page so that I can navigate easily around the application.***
 
 <br>
 
@@ -385,7 +383,7 @@ Related user stories:
 - Add modals for further user feedback.
 - Expand on the data fields available, so that walk posts can be more detailed (eg. implement Google Maps or What3Word functionality to give more precise location information).
 - Expand category choices for Gallery posts. 
-- Allow walk tracking functionality (similar to sites like <a href="https://www.komoot.com/" target="_blank" rel="noopener" aria-label="link to Kamoot">Kamoot)</a>. 
+- Allow walk tracking functionality (similar to sites like <a href="https://www.komoot.com/" target="_blank" rel="noopener" aria-label="link to Kamoot">Kamoot</a>). 
 
 ***
 
@@ -411,7 +409,7 @@ This bug was fixed by changing the 'default' value for the category field from '
 
 ## Unfixed
 
-No notable bugs have been found to remain and the website functions as expected.
+No notable bugs have been found to remain.
 
 ***
 
@@ -426,7 +424,7 @@ Modules used in this project can be found in the README for the DRF API <a href=
 - CSS
 - JavaScript
 
-## Frameworks, Libraries and Platforms used (Front End)
+## Frameworks, Libraries and Platforms (Front End)
 - Django REST Framework - Backend API.
 - React.js - Components and pages to form the frontend of the application.
 - React Bootstrap.js - Provides a library of out-of-the box components that contribute towards optimised UX. 
@@ -435,7 +433,7 @@ Modules used in this project can be found in the README for the DRF API <a href=
 - GitHub - Repository hosting.
 
 ## Services
-- [AmIResponsive](https://ui.dev/amiresponsive) - Check responsiveness on all screen sizes. 
+- [AmIResponsive](https://ui.dev/amiresponsive) - Check responsiveness on all screen sizes
 - [Coolors.co](https://coolors.co/) - Presentation of colors for README
 - [DrawSQLapp](https://drawsql.app/) - Development of database schema
 - [Favicon](https://favicon.io/) - Generation of favicon
@@ -484,13 +482,13 @@ Modules used in this project can be found in the README for the DRF API <a href=
 
 # Final Deployment
 
-1. **IMPORTANT** In setting.py in the DRF API, make sure that the 'CLIENT_ORIGIN_DEV' if statement is commented out, and the 'CLIENT_ORIGIN if statement is present (not the other way around): 
+1. **IMPORTANT!** In settings.py in the DRF API, make sure that the 'CLIENT_ORIGIN_DEV' if statement is commented out, and the 'CLIENT_ORIGIN' if statement is present (not the other way around): 
 
 ![Final Deployment](src/assets/readme_screenshots/client_origin.png)
 
-2. Ensure all finalised code is commited and pushed to github. 
+2. Ensure all finalised code is commited and pushed to Github. 
 
-3. Log into Heroki and open the dashboard for your frontend react application.
+3. Log into Heroku and open the dashboard for your frontend react application.
 
 4. Select the “Deploy” tab in the dashboard and select "Deploy Branch".
 
@@ -508,7 +506,7 @@ Modules used in this project can be found in the README for the DRF API <a href=
 
 - Trail icon by <a href="https://www.flaticon.com/free-icon/path_2296506?term=trail&page=1&position=8&page=1&position=8&related_id=2296506&origin=tag" title="Smashicons">Smashicons</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
-- Image upload icon by <a href="https://www.flaticon.com/free-icon/path_2296506?term=trail&page=1&position=8&page=1&position=8&related_id=2296506&origin=tag" title="Good Ware">Good Ware</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+- Image upload icon by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
 - No results icon by <a href="https://www.flaticon.com/free-icon/no-results_6134051?term=no%20results&page=1&position=29&page=1&position=29&related_id=6134051&origin=tag" title="Freepik">Freepik</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
@@ -518,7 +516,9 @@ Modules used in this project can be found in the README for the DRF API <a href=
 
 - Gallery post artwork by <a href="https://www.nickgerolemou.co.uk/" title="Nick Gerolemou"> Nick Gerolemou</a>
 
-- All other photographs on application at time of submission taken by Leah_Fisher_5P or supplied by other users. 
+- Avatar placeholder image taken from Code Institute Moments walkthrough project
+
+- All other photographs on application at time of submission taken by Leah_Fisher_5P or supplied by other users
 
 ***
 
