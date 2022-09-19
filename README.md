@@ -26,6 +26,13 @@ This application has been produced for Portfolio Project 5, as part of the Code 
 
 ![The Strategy Plane](src/assets/readme_screenshots/project_goals_user_stories.png)
 
+## Agile Methodology
+
+The development of this project was managed and implemented using GitHub Projects Kanban Board. Available here:
+<a href="https://github.com/users/cornishcoder1/projects/2" target="_blank" rel="noopener" aria-label="Link to GitHub Projects">The Winding Path - User Stories</a>
+
+<br>
+
 ## The Scope Plane
 
 Features planned:
