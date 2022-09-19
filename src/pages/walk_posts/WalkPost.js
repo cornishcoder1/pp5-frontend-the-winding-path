@@ -1,6 +1,11 @@
 import React from 'react';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Row, Col, Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Media from "react-bootstrap/Media";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from '../../api/axiosDefaults';

@@ -19,7 +19,6 @@ import ProfilePage from './pages/profiles/ProfilePage';
 import UsernameForm from "./pages/profiles/UserNameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-// import Footer from './components/Footer';
 import ContactForm from './pages/contact/ContactForm';
 import Confirmation from './pages/contact/Confirmation';
 import About from './pages/about/About';
