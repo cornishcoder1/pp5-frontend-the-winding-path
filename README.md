@@ -212,6 +212,26 @@ Related user stories:
 
 <br>
 
+Gallery: 
+
+![Features](src/assets/readme_screenshots/page_gallery.png)
+
+Related user stories:
+
+***As a user I can add gallery posts so that I can share my artwork or photography with other users.***
+
+***As a user I can read a gallery post so that I have access to all the information within that post***
+
+***As a user I can like other users gallery posts so that I can show my appreciation for other users content.***
+
+***As a user I can see how many likes a gallery post has had so that I can gauge it’s popularity.***
+
+***As a user I can view all posts and comments in date order (descending) so that I can quickly see the most recent content.***
+
+***As a user I can search for gallery posts by owner or title so that I can find the content I am most interested in.***
+
+<br>
+
 Add/Edit Walk post pages: 
 
 ![Features](src/assets/readme_screenshots/page_add_edit_walkpost.png)
@@ -244,7 +264,7 @@ Walk Post:
 
 Related user stories:
 
-As a user I can read a walk post so that I have access to all the information within that post
+***As a user I can read a walk post so that I have access to all the information within that post.***
 
 ***As a user I can delete walk posts so that I can remove content that I no longer want on the application.***
 
@@ -258,17 +278,17 @@ As a user I can read a walk post so that I have access to all the information wi
 
 <br>
 
-Gallery Post: 
+Gallery Post:
 
-![Features](src/assets/readme_screenshots/page_walkpost_one.png)
+![Features](src/assets/readme_screenshots/page_gallerypost_one.png)
 
-![Features](src/assets/readme_screenshots/page_walkpost_two.png)
+![Features](src/assets/readme_screenshots/page_gallerypost_two.png)
 
 Related user stories:
 
-As a user I can read a walk post so that I have access to all the information within that post
+***As a user I can read a gallery post so that I have access to all the information within that post.***
 
-***As a user I can delete walk posts so that I can remove content that I no longer want on the application.***
+***As a user I can delete gallery posts so that I can remove content that I no longer want on the application.***
 
 ***As a user I can comment on walk and gallery posts so that I can communicate my thoughts and opinions with other users.***
 
@@ -287,26 +307,6 @@ About:
 Related user stories:
 
 ***As a user I can access an 'about' page so that I can find out more about the application.***
-
-<br>
-
-Gallery: 
-
-![Features](src/assets/readme_screenshots/page_gallery.png)
-
-Related user stories:
-
-***As a user I can add gallery posts so that I can share my artwork or photography with other users.***
-
-***As a user I can read a gallery post so that I have access to all the information within that post***
-
-***As a user I can like other users gallery posts so that I can show my appreciation for other users content.***
-
-***As a user I can see how many likes a gallery post has had so that I can gauge it’s popularity.***
-
-***As a user I can view all posts and comments in date order (descending) so that I can quickly see the most recent content.***
-
-***As a user I can search for gallery posts by owner or title so that I can find the content I am most interested in.***
 
 <br>
 
