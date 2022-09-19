@@ -478,7 +478,7 @@ The about page is accessible via a navigation bar link:
 
 - CRUD functionality behaves as expected for updating Profiles, Username and Password. 
 
-- All posts and comments display in ascending order of when they were last updated. 
+- All posts display in ascending order of when they were last updated. 
 
 - All search bars return the correctly filtered post data. 
 
@@ -508,7 +508,7 @@ All CSS code passed through the validator with no issues:
 
 ![Validator testing](src/assets/testing_screenshots/css_validation.png)
 
-## Lighthouse (DO AGAIN POST DEPLOYMENT)
+## Lighthouse
 
 The site scored highly on accessibility: 
 
@@ -516,7 +516,7 @@ The site scored highly on accessibility:
 
 ***
 
-# Responsive Testing (DO THIS POST DEPLOYMENT)
+# Responsive Testing
 
 The website has been tested using the following browsers:
 
@@ -541,14 +541,6 @@ The following emulated devices have been tested in Dev Tools:
 - iPad Mini
 - Galaxy A51/71 
 
-All functionality worked as expected for every device and web browser. The only issue encountered was that the 'Add Review' button disappeared on small screens when viewed horizontally. This was fixed by adding a top margin to the container below the header (see fixed bugs section of README for more information). 
+During testing it was found that users are unable to log in if using Firefox and Safari. It was suggested by a fellow student on Slack that this may be because third party cookies are being blocked, however no solution was provided. 
 
-
-
-
-
-<!-- check all files -->
-npx eslint "src/**" 
-
-<!-- check just js files -->
-npx eslint "src*.js"
+The only layout issue encountered was that the 'About' page had some excess whitespace at the bottom on some smaller screen sizes.
