@@ -24,14 +24,14 @@ function About() {
                 and share artwork and photography inspired by the beautiful natural world they encounter. 
             </p>
             <p>
-                Create a Walk Post - share handy information on your favourite walks,
+                <strong>Create a Walk Post</strong> - share handy information on your favourite walks,
                 so that fellow community members know what to expect if they follow in your footsteps.
             </p>
             <p>
-                Create a Gallery Post - If photography or artwork is your thing, share your creations with a Gallery Post.
+                <strong>Create a Gallery Post</strong> - If photography or artwork is your thing, share your creations with a Gallery Post.
             </p>
             <p>
-                Interact - You can save your favourite walk posts and access them in your Saved Walks feed, as well as post
+            <strong>Interact</strong> - You can save your favourite walk posts and access them in your Saved Walks feed, as well as post
                 comments on individual posts. Gallery posts can be liked and commented on too. 
             </p>
             <p>
