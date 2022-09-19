@@ -22,13 +22,52 @@ The Winding Path has been built using the Django Rest Framework (Python), React.
 
 ## The Strategy Plane
 
+This application has been produced for Portfolio Project 5, as part of the Code Institute Diploma in Full-Stack Software Development. The project aims to demonstrate skills learnt in HTML, CSS, JavaScript, React.js, Bootstrap.js and Django REST Framework.
+
+![The Strategy Plane](src/assets/readme_screenshots/project_goals_user_stories.png)
+
 ## The Scope Plane
+
+Features planned:
+
+- Visually appealing design with a calming color scheme.
+- Intuitive and easy to use navigation.
+- Limited navigation for logged out users (full functionality available to logged in users).
+- Walk posts - Logged in users can create, read, update and delete their own posts.
+- Gallery posts - Logged in users can create, read, update and delete their own posts.
+- Search Walk posts - Search by owner, title, environment or difficulty. 
+- Search Gallery posts - Search by owner or title. 
+- Comments - All posts can be commented upon. 
+- Likes - Gallery posts can be likes.
+- Save - Walk posts can be saved. 
+- Users can sign up, log in and log out.
+- Form errors will be communicated to user.
 
 ## The Structure Plane
 
+Flowchart (This flowchart was drafted at the very early planning stages of the project and does not feature walk and gallery posts as separate entities):
+
+![The Structure Plane](src/assets/readme_screenshots/flowchart.png)
+
+Database Schema can be found in the README for the DRF API <a href="https://github.com/cornishcoder1/pp5-backend-DRF-the-winding-path/blob/main/README.md#database-schema---entity-relationship-diagram" target="_blank" rel="noopener" aria-label="Link to database scheme">here</a>
+
 ## The Skeleton Plane
 
+All wireframes for the project can be found [here](src/assets/wireframes/)
+
+These wireframe were drafted at the very early planning stages of the project and may not feature all pages and their features. 
+
 ## The Surface Plane
+
+**Color Scheme**
+
+![The Surface Plane](src/assets/readme_screenshots/color_scheme.png)
+
+I wanted the main colours of the site to be calming and neutral, with a natural feel hence the use of the green and brown tones. Buttons were styled in bolder colors, but in keeping with the color scheme.
+
+**Typography**
+
+The font used throughout the website is 'Zilla Slab' from <a href="https://fonts.google.com/specimen/Zilla+Slab?preview.text=the%20winding%20path&preview.text_type=custom" title="Google Fonts">Google Fonts</a>. I liked the classic and sleek style of this font, and it fitted well with the theme of the application. 
 
 ***
 
