@@ -13,7 +13,7 @@
 
 ***
 
-# User Story testing
+# User Story Testing
 
 # User Story Tests
 
@@ -45,7 +45,7 @@ Link to sign up form present in navbar:
 
 ![User Story testing](src/assets/testing_screenshots/sign_up_form.png)
 
-Upon submitting Sign Up form, user is re-directed to Log In page:
+Upon submitting Sign Up form, user is re-directed to log in page:
 
 ![User Story testing](src/assets/testing_screenshots/login.png)
 
@@ -63,7 +63,7 @@ Link to log in form present in navbar:
 
 ![User Story testing](src/assets/testing_screenshots/login_link.png)
 
-Upon logging in, all functionality is available to logged in user (full navigation bar and 'Add Post' links in Walks Post Page and Gallery Posts Page):
+Upon logging in, all functionality is available to logged in user (full navigation bar and add post links in Walks Post Page and Gallery Posts Page):
 
 ![User Story testing](src/assets/testing_screenshots/full_functionality.png)
 
@@ -73,7 +73,7 @@ Upon logging in, all functionality is available to logged in user (full navigati
 
 ![User Story testing](src/assets/testing_screenshots/ac_logout.png)
 
-Link to Log Out displays if user is logged in: 
+Link to Log out displays if user is logged in: 
 
 ![User Story testing](src/assets/testing_screenshots/logout_link.png)
 
@@ -219,7 +219,7 @@ Upon clicking the 'delete' button the post is deleted from the application and t
 
 ![User Story testing](src/assets/testing_screenshots/ac_like_gallerypost.png)
 
-![User Story testing](src/assets/testing_screenshots/like__count_gallerypost.png)
+![User Story testing](src/assets/testing_screenshots/like_count_gallerypost.png)
 
 Users can click the 'like' heart button on any gallery post (in the posts feed or specific post) to like or unlike a post. The visible like count will increase or decrease on each post when a user likes/unlikes:
 
