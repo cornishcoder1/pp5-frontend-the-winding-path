@@ -111,16 +111,4 @@ function GalleryPostsPage({ message, filter = "" }) {
       );
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
 export default GalleryPostsPage;

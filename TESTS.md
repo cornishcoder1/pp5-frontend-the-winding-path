@@ -398,8 +398,9 @@ Upon entering a valid password, and clicking the 'save' button, the user is retu
 ![User Story testing](src/assets/testing_screenshots/ac_date_ordered.png)
 
 All posts are listed in date order of when they were last updated (most recent first).
+**Bug Detected! See no.3 in 'Fixed Bugs' section of README**
 
-All comments are listed in order of when they were last updated (days, hours and minutes): 
+All comments are listed in order of when they were created (last updated status displays within the comment in days, hours and minutes format): 
 
 ![User Story testing](src/assets/testing_screenshots/comments_date_ordered.png)
 

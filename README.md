@@ -45,6 +45,8 @@ Implement manual testing and document the procedures and results.
 
 This bug was fixed by changing the 'default' value for the category field from '0' to 'artwork' in the DRF API Gallery model. Once this was changed, the default value of 'artwork' would show in the post if not changed by the user. 
 
+3. When testing the deployed application, I noticed that posts were not displaying at the top of the posts feed after being updated (for both walk and gallery posts). I fixed this in the DRF API by changing the 'ordering' value in the models.py file to 'updated_on' instead of 'created_on'. I also had to make the same changes to any 'ordering' values in the views.py file. I made these changes for both gallery and walk posts.  
+
 ## Unfixed
 
 - Edit Profile form not submitting correctly due to Location field
