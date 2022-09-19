@@ -56,7 +56,7 @@ Flowchart (This flowchart was drafted at the very early planning stages of the p
 
 ![The Structure Plane](src/assets/readme_screenshots/flowchart.png)
 
-Database Schema can be found in the README for the DRF API <a href="https://github.com/cornishcoder1/pp5-backend-DRF-the-winding-path/blob/main/README.md#database-schema---entity-relationship-diagram" target="_blank" rel="noopener" aria-label="Link to database scheme">here</a>
+Database Schema can be found in the README for the DRF API <a href="https://github.com/cornishcoder1/pp5-backend-DRF-the-winding-path/blob/main/README.md#database-schema---entity-relationship-diagram" target="_blank" rel="noopener" aria-label="Link to database schema">here</a>
 
 ## The Skeleton Plane
 
@@ -340,13 +340,18 @@ Related user stories:
 
 <br>
 
-## Features left to implement
+## Features left to implement (possible future sprints): 
+
+- Add modals for further user feedback.
+- Expand on the data fields available, so that walk posts can be more detailed (eg. implement Google Maps or What3Word functionality to give more precise location information).
+- Expand category choices for Gallery posts. 
+- Allow walk tracking functionality (similar to sites like <a href="https://www.komoot.com/" target="_blank" rel="noopener" aria-label="link to Kamoot">Kamoot)</a>. 
 
 ***
 
 # Testing
-(link to separate tests.md file)
-Implement manual testing and document the procedures and results. 
+
+- All testing documentation can be found [here](/TESTS.md)
 
 ***
 
@@ -366,25 +371,48 @@ This bug was fixed by changing the 'default' value for the category field from '
 
 ## Unfixed
 
-- Edit Profile form not submitting correctly due to Location field
-
-- Edit Gallery Post - Category not changing as expected
+No notable bugs have been found to remain and the website functions as expected.
 
 ***
 
 # Technologies Used
 
-- Modules
-- Languages
-- Libraries (Front End) - How have features used improved UX (Outcome 2.1 Merit)
-- Frameworks
-- Platforms
-- Services 
-- Resources
+## Modules
+Modules used in this project can be found in the README for the DRF API <a href="https://github.com/cornishcoder1/pp5-backend-DRF-the-winding-path/blob/main/README.md#modules" target="_blank" rel="noopener" aria-label="Link to modules used">here</a>
+
+## Languages
+- HTML
+- JSX
+- CSS
+- JavaScript
+
+## Frameworks, Libraries and Platforms used (Front End)
+- Django REST Framework - Backend API.
+- React.js - Components and pages to form the frontend of the application.
+- React Bootstrap.js - Provides a library of out-of-the box components that contribute towards optimised UX. 
+- Balsamiq - Creation of wireframes. 
+- GitPod - Workspace.
+- GitHub - Repository hosting.
+
+## Services
+- [AmIResponsive](https://ui.dev/amiresponsive) - Check responsiveness on all screen sizes. 
+- [Coolors.co](https://coolors.co/) - Presentation of colors for README
+- [DrawSQLapp](https://drawsql.app/) - Development of database schema
+- [Favicon](https://favicon.io/) - Generation of favicon
+- [FontAwesome](https://fontawesome.com/) - Icons used for UX purposes
+- [GoogleFonts](https://fonts.google.com/) - 'Zilla Slab' font used throughout site
+- [LucidChart](https://www.lucidchart.com/) - Development of flowchart
+- [Mycolor.space](https://mycolor.space/) - Generation of color palettes
+
+## Resources
+
+- The Code Institute's Moments walkthrough project was used in the beginning stages of the project to help get me started. I then customised and added further functionality as my confidence and knowledge grew.
+- React Bootstrap documentation was relied upon for assistance with page layouts and components. 
+- W3C Schools and Stack Overflow for general enquiries relating to React.js.
 
 ***
 
-# Project Setup
+# Project Setup and Initial Deployment
 
 1. Create a new repository in GitHub (do not use CI Template).
 
@@ -414,16 +442,29 @@ This bug was fixed by changing the 'default' value for the category field from '
 
 ***
 
-# Deployment
-Final deployment
+# Final Deployment
+
+1. **IMPORTANT** In setting.py in the DRF API, make sure that the 'CLIENT_ORIGIN_DEV' if statement is commented out, and the 'CLIENT_ORIGIN if statement is present (not the other way around): 
+
+![Final Deployment](src/assets/readme_screenshots/client_origin.png)
+
+2. Ensure all finalised code is commited and pushed to github. 
+
+3. Log into Heroki and open the dashboard for your frontend react application.
+
+4. Select the “Deploy” tab in the dashboard and select "Deploy Branch".
+
+5. Wait for the build to complete (you can click “view build log” to watch the process in a larger window).
+
+6. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+
+7. Test the deployed application to ensure it matches the development version. 
 
 ***
 
-# References
+# Credits
 
-***
-
-# Media
+## Media
 
 - Trail icon by <a href="https://www.flaticon.com/free-icon/path_2296506?term=trail&page=1&position=8&page=1&position=8&related_id=2296506&origin=tag" title="Smashicons">Smashicons</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
@@ -431,11 +472,22 @@ Final deployment
 
 - No results icon by <a href="https://www.flaticon.com/free-icon/no-results_6134051?term=no%20results&page=1&position=29&page=1&position=29&related_id=6134051&origin=tag" title="Freepik">Freepik</a> on <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
 
+- Peak/Hill image by <a href="https://unsplash.com/@nick_" title="Nicholas Beel"> Nicholas Beel</a> on <a href="https://unsplash.com/" title="Unsplash">Unsplash</a>
+
+- Whiskey image by <a href="https://unsplash.com/@disguise_truth" title="Anastasia Zhenina"> Anastasia Zhenina</a> on <a href="https://unsplash.com/" title="Unsplash">Unsplash</a>
+
+- Gallery post artwork by <a href="https://www.nickgerolemou.co.uk/" title="Nick Gerolemou"> Nick Gerolemou</a>
+
+- All other photographs on application at time of submission taken by Leah_Fisher_5P or supplied by other users. 
+
 ***
 
 # Credits
 
 - Charlie_Alumni, Bim_Alumni and Lauren_Nicole for helping me install ESLint correctly. 
+- Lauren_Nicole for the chats and support. Also for supplying her own React Front End PP5 for reference. 
+- Alan at Tutor Support for helping me with final deployment. 
+- The Slack Community for an invaluable archive of help! 
 
 
 
