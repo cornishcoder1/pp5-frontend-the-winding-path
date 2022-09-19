@@ -10,9 +10,13 @@ Users can save their favourite walk posts and access them in a Saved Walks feed,
 
 The Winding Path has been built using the Django Rest Framework (Python), React.js, Bootstrap.js, HTML, CSS & JavaScript. It provides user authentication and full CRUD functionality.
 
-<a href="https://the-winding-path-drf-api.herokuapp.com/" target="_blank" rel="noopener" aria-label="Link to deployed DRF API">Click here</a> for the deployed DRF API
+[Deployed DRF API (via Heroku)](https://the-winding-path-drf-api.herokuapp.com/)
 
-<a href="https://the-winding-path.herokuapp.com/" target="_blank" rel="noopener" aria-label="Link to deployed application">Click here </a> for the deployed Front End application 
+[Deployed Front End](https://the-winding-path.herokuapp.com/)
+
+[Back End README.md](https://github.com/cornishcoder1/pp5-backend-DRF-the-winding-path/blob/main/README.md)
+
+[Back End TESTS.md](https://github.com/cornishcoder1/pp5-backend-DRF-the-winding-path/blob/main/TESTS.md)
 
 ![Am I Responsive](src/assets/testing_screenshots/am_i_responsive.png)
 
