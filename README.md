@@ -138,13 +138,207 @@ Related user stories:
 
 ***As a user I can change my password so that I can ensure security if required.***
 
+<br>
 
+NavBar: 
 
+![Features](src/assets/readme_screenshots/component_navbar_logged_out.png)
 
+![Features](src/assets/readme_screenshots/component_navbar_logged_in.png)
+
+![Features](src/assets/readme_screenshots/component_navbar_hamburger.png)
+
+This component is present on every page of the application. It contributes to improved UX as the user can access most of the site features in one place, from any page. It also collapses into a hamburger menu for screen sizes medium and below.
+
+Related user stories:
+
+***As a user I can view the navigation bar on every page so that I can navigate easily around the application.***
+
+<br>
+
+NotFound: 
+
+![Features](src/assets/readme_screenshots/component_not_found.png)
+
+This component appears whenever a user tries to access an invalid url. It contributes to improved UX as the user is informed clearly and quickly that the page they are looking for does not exist. 
+
+Related user stories:
+
+***As a user I can view the navigation bar on every page so that I can navigate easily around the application.***
 
 <br>
 
 ## Pages
+
+Sign up: 
+
+![Features](src/assets/readme_screenshots/page_signup.png)
+
+Related user stories:
+
+***As a user I can access the Sign Up option so that I can create an account and access all features available to signed up users.***
+
+<br>
+
+Log in: 
+
+![Features](src/assets/readme_screenshots/page_login.png)
+
+Related user stories:
+
+***As a user I can log in with my authentication credentials so that I can access all features available to signed up users.***
+
+<br>
+
+Home, Following & Saved Walks pages: 
+
+![Features](src/assets/readme_screenshots/page_walkpost.png)
+
+Related user stories:
+
+***As a user I can add walk posts so that I can share my walking experiences with other users.***
+
+***As a user I can read a walk post so that I have access to all the information within that post***
+
+***As a user I can access a list of ‘Who to Follow’ profiles so that I can see and interact with other users of the site and their content.***
+
+***As a user I can access a ‘Following’ feed , so that I can view content filtered by what profiles I follow.***
+
+***As a user I can save walk posts that are of particular interest, so that I can find them again later in my ‘Saved Walks’ feed.***
+
+***As a user I can view all posts and comments in date order (descending) so that I can quickly see the most recent content.***
+
+***As a user I can search for walk posts by owner, title, environment or difficulty so that I can find the content I am most interested in.***
+
+<br>
+
+Add/Edit Walk post pages: 
+
+![Features](src/assets/readme_screenshots/page_add_edit_walkpost.png)
+
+Related user stories:
+
+***As a user I can add walk posts so that I can share my walking experiences with other users.***
+
+***As a user I can edit my own walk posts so that I can update or change information.***
+
+<br>
+
+Add/Edit Gallery post pages: 
+
+![Features](src/assets/readme_screenshots/page_add_edit_gallerypost.png)
+
+Related user stories:
+
+***As a user I can add gallery posts so that I can share my artwork or photography with other users.***
+
+***As a user I can edit my own gallery posts so that I can update or change information.***
+
+<br>
+
+Walk Post: 
+
+![Features](src/assets/readme_screenshots/page_walkpost_one.png)
+
+![Features](src/assets/readme_screenshots/page_walkpost_two.png)
+
+Related user stories:
+
+As a user I can read a walk post so that I have access to all the information within that post
+
+***As a user I can delete walk posts so that I can remove content that I no longer want on the application.***
+
+***As a user I can comment on walk and gallery posts so that I can communicate my thoughts and opinions with other users.***
+
+***As a user I can read comments on walk and gallery posts so that I can see the thoughts and opinions of other users.***
+
+***As a user I can edit my own comments so that I can update or change the content of my existing comments.***
+
+***As a user I can delete my own comments so that I can remove comments that I no longer want on the application.***
+
+<br>
+
+Gallery Post: 
+
+![Features](src/assets/readme_screenshots/page_walkpost_one.png)
+
+![Features](src/assets/readme_screenshots/page_walkpost_two.png)
+
+Related user stories:
+
+As a user I can read a walk post so that I have access to all the information within that post
+
+***As a user I can delete walk posts so that I can remove content that I no longer want on the application.***
+
+***As a user I can comment on walk and gallery posts so that I can communicate my thoughts and opinions with other users.***
+
+***As a user I can read comments on walk and gallery posts so that I can see the thoughts and opinions of other users.***
+
+***As a user I can edit my own comments so that I can update or change the content of my existing comments.***
+
+***As a user I can delete my own comments so that I can remove comments that I no longer want on the application.***
+
+<br>
+
+About: 
+
+![Features](src/assets/readme_screenshots/page_about.png)
+
+Related user stories:
+
+***As a user I can access an 'about' page so that I can find out more about the application.***
+
+<br>
+
+Gallery: 
+
+![Features](src/assets/readme_screenshots/page_gallery.png)
+
+Related user stories:
+
+***As a user I can add gallery posts so that I can share my artwork or photography with other users.***
+
+***As a user I can read a gallery post so that I have access to all the information within that post***
+
+***As a user I can like other users gallery posts so that I can show my appreciation for other users content.***
+
+***As a user I can see how many likes a gallery post has had so that I can gauge it’s popularity.***
+
+***As a user I can view all posts and comments in date order (descending) so that I can quickly see the most recent content.***
+
+***As a user I can search for gallery posts by owner or title so that I can find the content I am most interested in.***
+
+<br>
+
+Contact Us/Confirmation: 
+
+![Features](src/assets/readme_screenshots/page_contact.png)
+
+![Features](src/assets/readme_screenshots/page_confirmation.png)
+
+Related user stories:
+
+***As a user I can fill out and submit a contact form so that I can make admin aware of any issues or feedback.***
+
+<br>
+
+Profile: 
+
+![Features](src/assets/readme_screenshots/page_profile.png)
+
+Related user stories:
+
+***As a user I can access other users profiles so that I can view walk posts by a specific user.***
+
+***As a user I can view stats on user profiles so that I can learn more about a specific user.***
+
+***As a user I can access my own profile so that I can edit my details.***
+
+***As a user I can change my username so that I can ensure security if required.***
+
+***As a user I can change my password so that I can ensure security if required.***
+
+<br>
 
 ## Features left to implement
 
