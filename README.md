@@ -116,7 +116,7 @@ I wanted the main colours of the site to be calming and neutral with a natural f
 
 **Typography**
 
-The font used throughout the website is 'Zilla Slab' from <a href="https://fonts.google.com/specimen/Zilla+Slab?preview.text=the%20winding%20path&preview.text_type=custom" title="Google Fonts">Google Fonts</a>. I liked the classic and sleek style of this font, and it fitted well with the theme of the application. 
+The font used throughout the application is 'Zilla Slab' from <a href="https://fonts.google.com/specimen/Zilla+Slab?preview.text=the%20winding%20path&preview.text_type=custom" title="Google Fonts">Google Fonts</a>. I liked the classic and sleek style of this font, and it fitted well with the overall aesthetic. 
 
 ***
 
@@ -383,6 +383,7 @@ Related user stories:
 - Add modals for further user feedback.
 - Expand on the data fields available, so that walk posts can be more detailed (eg. implement Google Maps or What3Word functionality to give more precise location information).
 - Expand category choices for Gallery posts. 
+- Link Gallery posts to Profiles (the same way a user's Walk posts are visible on their profile page).
 - Allow walk tracking functionality (similar to sites like <a href="https://www.komoot.com/" target="_blank" rel="noopener" aria-label="link to Kamoot">Kamoot</a>). 
 
 ***
