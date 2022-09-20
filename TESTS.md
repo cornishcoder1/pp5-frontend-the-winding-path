@@ -478,9 +478,9 @@ The about page is accessible via a navigation bar link:
 
 - The profile page displays all profile data as expected. 
 
-- CRUD functionality behaves as expected for updating Profiles, Username and Password. 
+- CRUD functionality behaves as expected for updating Profiles, username and password. 
 
-- All posts display in ascending order of when they were last updated. 
+- All posts display in descending order of when they were last updated. 
 
 - All search bars return the correctly filtered post data. 
 
