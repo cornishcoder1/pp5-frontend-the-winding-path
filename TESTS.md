@@ -357,7 +357,7 @@ When the 'save' button is clicked, the user is returned to their updated profile
 
 A dropdown menu is present in a user's own profile with a 'change username' button:
 
-![User Story testing](src/assets/testing_screenshots/change_username_link.png)
+![User Story testing](src/assets/testing_screenshots/change_password_link.png)
 
 After clicking the 'change username' button, the user is taken to a form where they can change their username:
 
