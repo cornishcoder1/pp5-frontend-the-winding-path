@@ -545,6 +545,6 @@ The following emulated devices have been tested in Dev Tools:
 - iPad Mini
 - Galaxy A51/71 
 
-During testing it was found that users are unable to log in if using Firefox and Safari. It was suggested by a fellow student on Slack that this may be because third party cookies are being blocked, however no solution was provided. 
+During testing it was found that users are unable to log in if using Firefox or Safari. It was suggested by a fellow student on Slack that for Safari, details are registered on login but cookies are not saved and the access tokens are not kept. They suggested turning off “Prevent Cross-Site Tracking” in the browser settings. This allowed login on the desktop version of Safari, but not the mobile version (the latter was true for FireFox mobile version). 
 
 The only layout issue encountered was that the 'About' page had some excess whitespace at the bottom on some smaller screen sizes.

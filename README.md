@@ -512,6 +512,10 @@ Modules used in this project can be found in the README for the DRF API <a href=
 
 - Peak/Hill image by <a href="https://unsplash.com/@nick_" title="Nicholas Beel"> Nicholas Beel</a> on <a href="https://unsplash.com/" title="Unsplash">Unsplash</a>
 
+- Mam Tor text from <a href="https://www.visitpeakdistrict.com/things-to-do/mam-tor-shivering-mountain-p689981" title="Visit Peak District">Visit Peak District</a> 
+
+- Dungeness text from <a href="https://www.discoveringbritain.org/content/discoveringbritain/trail%20booklets/Dungeness%20trail.pdf" title="Discovering Britain">Discovering Britain</a> 
+
 - Whiskey image by <a href="https://unsplash.com/@disguise_truth" title="Anastasia Zhenina"> Anastasia Zhenina</a> on <a href="https://unsplash.com/" title="Unsplash">Unsplash</a>
 
 - Gallery post artwork by <a href="https://www.nickgerolemou.co.uk/" title="Nick Gerolemou"> Nick Gerolemou</a>
@@ -526,6 +530,7 @@ Modules used in this project can be found in the README for the DRF API <a href=
 
 - Charlie_Alumni, Bim_Alumni and Lauren_Nicole for helping me install ESLint correctly. 
 - Lauren_Nicole for the chats and support. Also for supplying her own React Front End PP5 for reference. 
+- Tom_5p for his assistance with Safari/FireFox log in issue. 
 - Alan at Tutor Support for helping me with final deployment. 
 - The Slack Community for an invaluable archive of help! 
 
