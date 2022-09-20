@@ -164,7 +164,7 @@ const WalkPost = (props) => {
               <Col>
                 <p>
                   <span className={styles.Icon}><i className="fas fa-hiking" /></span>
-                  Difficuly: {difficulty}
+                  Difficulty: {difficulty}
                 </p>
               </Col>
               <Col>
