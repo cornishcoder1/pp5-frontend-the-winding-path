@@ -1,6 +1,6 @@
 import { rest } from "msw";
 
-const baseURL = "https://the-winding-path-drf-api.herokuapp.com"
+const baseURL = "https://pp5-backend-drf-the-winding-path.onrender.com"
 
 export const handlers = [
     rest.get(`${baseURL}dj-rest-auth/user/`, (req, res, ctx) => {
