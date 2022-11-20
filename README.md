@@ -32,7 +32,9 @@
 
 8. [Final Deployment](#final-deployment)
 
-9. [Credits](#credits)
+9. [Deployment Update Nov 2022](#deployment-update-nov-2022)
+
+10. [Credits](#credits)
     1. [Media](#media)
     2. [Acknowledgements](#acknowledgements)
 
@@ -432,6 +434,8 @@ Modules used in this project can be found in the README for the DRF API <a href=
 - Balsamiq - Creation of wireframes. 
 - GitPod - Workspace.
 - GitHub - Repository hosting.
+- Heroku - Platform for final deployed version of site (until November 2022)
+- Render - Deployment of frontend (from November 2022)
 
 ## Services
 - [AmIResponsive](https://ui.dev/amiresponsive) - Check responsiveness on all screen sizes
@@ -498,6 +502,14 @@ Modules used in this project can be found in the README for the DRF API <a href=
 6. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
 
 7. Test the deployed application to ensure it matches the development version. 
+
+***
+
+# Deployment (Update, Nov 2022)
+
+As of November 2022, Heroku ceased to provide a free service. Therefore, to continuing hosting <a href="https://the-winding-path.onrender.com/">this project</a> without charge I transferred it to free services <a href="https://render.com/">Render</a> and <a href="https://www.elephantsql.com/">ElephantSQL</a>.
+
+The steps followed to migrate this project from Heroku to Render can be found <a href="https://code-institute-students.github.io/deployment-docs/41-pp5-adv-fe/pp5-adv-fe-react-01-applying-your-deployed-api">here</a>.
 
 ***
 
