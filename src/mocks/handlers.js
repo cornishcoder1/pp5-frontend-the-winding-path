@@ -1,5 +1,6 @@
 import { rest } from "msw";
 
+// const baseURL = "https://pp5-backend-drf-the-winding-path.onrender.com"
 const baseURL = "https://pp5-backend-drf-the-winding-path.onrender.com"
 
 export const handlers = [
