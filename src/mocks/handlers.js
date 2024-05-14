@@ -1,7 +1,7 @@
 import { rest } from "msw";
 
-// const baseURL = "https://pp5-backend-drf-the-winding-path.onrender.com"
-const baseURL = "postgres://windingpathdb_owner:Upd6SGCy4rYw@ep-spring-term-a22ni9dt.eu-central-1.aws.neon.tech/thewindingpathdb?sslmode=require";
+const baseURL = "https://pp5-backend-drf-the-winding-path.onrender.com"
+// const baseURL = "postgres://windingpathdb_owner:Upd6SGCy4rYw@ep-spring-term-a22ni9dt.eu-central-1.aws.neon.tech/thewindingpathdb?sslmode=require";
 
 export const handlers = [
     rest.get(`${baseURL}dj-rest-auth/user/`, (req, res, ctx) => {
